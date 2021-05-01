@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using UnityEditor.SceneManagement;
+using UnityEngine;
 
 public class AudioManager : Singleton<AudioManager>
 {
-    [SerializeField] private AudioSource[] sources;
     [SerializeField] private UISoundController soundController;
+    private readonly List<AudioSource> sources = new List<AudioSource>();
 
     private void Start()
     {
@@ -14,13 +16,15 @@ public class AudioManager : Singleton<AudioManager>
 
     private void SetUpSound()
     {
-        for (int i = 0; i < soundController.Sets.Length; i++)
+        foreach (var set in soundController.Sets)
         {
-            sources[i].Stop();
-            sources[i].clip = soundController.Sets[i].BackgroundMusic;
-            sources[i].volume = .5f;
-            sources[i].mute = true;
-            sources[i].loop = true;
+            AudioSource aud = gameObject.AddComponent<AudioSource>();
+            sources.Add(aud);
+            aud.Stop();
+            aud.clip = set.BackgroundMusic;
+            aud.volume = .5f;
+            aud.mute = true;
+            aud.loop = true;
         }
     }
 
@@ -51,7 +55,7 @@ public class AudioManager : Singleton<AudioManager>
 
     private void HandleThemeChange(Theme newTheme)
     {
-        for (int i = 0; i < sources.Length; i++)
+        for (int i = 0; i < sources.Count; i++)
             sources[i].mute = i != (int) newTheme;
     }
 
