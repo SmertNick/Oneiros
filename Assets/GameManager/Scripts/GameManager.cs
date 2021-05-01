@@ -64,6 +64,8 @@ public class GameManager : Singleton<GameManager>
         ao.completed += OnLoadOperationComplete;
         loadOperations.Add(ao);
         currentLevelName = levelName;
+        //add transition animation
+        //make a progress bar from ao.progress (float 0-1)
     }
 
     private void OnLoadOperationComplete(AsyncOperation ao)
@@ -73,6 +75,7 @@ public class GameManager : Singleton<GameManager>
             loadOperations.Remove(ao);
             ao.completed -= OnLoadOperationComplete;
         }
+        //End transition animation
         Debug.Log("Load Complete");
     }
 
@@ -105,6 +108,7 @@ public class GameManager : Singleton<GameManager>
     protected override void OnDestroy()
     {
         base.OnDestroy();
+        Events.OnThemeChange -= ThemeChangeHandler;
         foreach (GameObject obj in instancedSystemPrefabs)
             Destroy(obj);
         instancedSystemPrefabs.Clear();
