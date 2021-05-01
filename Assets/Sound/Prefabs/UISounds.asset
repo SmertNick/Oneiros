@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df8ab2e1568caf74ba72a17d7e2f6852, type: 3}
   m_Name: UISounds
   m_EditorClassIdentifier: 
-  sets: []
+  sets:
+  - {fileID: 11400000, guid: 75bc27cf6341c56458620515bdd4f100, type: 2}
+  - {fileID: 11400000, guid: 80268959a9501f8409a551d034d1ae45, type: 2}

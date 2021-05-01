@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a614bdf0e072cd24d8823344844efced, type: 3}
-  m_Name: UI Happy Set
+  m_Name: UI Brutal Set
   m_EditorClassIdentifier: 
   backgroundMusic: {fileID: 0}
   buttonHoverSound: {fileID: 0}
