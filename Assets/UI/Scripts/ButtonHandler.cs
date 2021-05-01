@@ -1,13 +1,12 @@
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class ButtonHandler : MonoBehaviour
 {
     private Button button;
     private AudioSource aud;
-    [SerializeField] private AudioClip hoverClip, clickClip;
-    private TMP_Text text;
+    private Theme theme = Theme.Happy;
+    [SerializeField] private UISoundController soundController;
 
     private void Start()
     {
@@ -15,20 +14,25 @@ public class ButtonHandler : MonoBehaviour
         aud = GetComponent<AudioSource>();
         button.onClick.AddListener(PlayClickSound);
         Events.OnFXVolumeChange += ChangeVolume;
+        Events.OnThemeChange += HandleThemeChange;
     }
+
+    private void HandleThemeChange(Theme newTheme)
+    {
+        theme = newTheme;
+    }
+
     public void OnHover()
     {
-        if (button == null || aud == null || hoverClip == null) return;
         aud.Stop();
-        aud.clip = hoverClip;
+        aud.clip = soundController.Sets[(int) theme].ButtonHoverSound;
         aud.Play();
     }
 
     private void PlayClickSound()
     {
-        if (button == null || aud == null || clickClip == null) return;
         aud.Stop();
-        aud.clip = clickClip;
+        aud.clip = soundController.Sets[(int) theme].ButtonClickSound;
         aud.Play();
     }
 
@@ -42,5 +46,6 @@ public class ButtonHandler : MonoBehaviour
     {
         button.onClick.RemoveListener(PlayClickSound);
         Events.OnFXVolumeChange -= ChangeVolume;
+        Events.OnThemeChange -= HandleThemeChange;
     }
 }

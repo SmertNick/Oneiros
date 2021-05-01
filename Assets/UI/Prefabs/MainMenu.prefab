@@ -1570,8 +1570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ab5da7172531445939d3531be43a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverClip: {fileID: 8300000, guid: da0895a1c9dfa58458e87d68c8822e6e, type: 3}
-  clickClip: {fileID: 8300000, guid: 4e7860e5531de5e4489636271930911a, type: 3}
+  soundController: {fileID: 11400000, guid: 62a5579bf61be0b4eb1f861b94c7051f, type: 2}
 --- !u!82 &2766947511979277166
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1904,8 +1903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ab5da7172531445939d3531be43a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverClip: {fileID: 8300000, guid: da0895a1c9dfa58458e87d68c8822e6e, type: 3}
-  clickClip: {fileID: 8300000, guid: 4e7860e5531de5e4489636271930911a, type: 3}
+  soundController: {fileID: 11400000, guid: 62a5579bf61be0b4eb1f861b94c7051f, type: 2}
 --- !u!82 &6845725339300743675
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2253,8 +2251,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ab5da7172531445939d3531be43a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverClip: {fileID: 8300000, guid: da0895a1c9dfa58458e87d68c8822e6e, type: 3}
-  clickClip: {fileID: 8300000, guid: 4e7860e5531de5e4489636271930911a, type: 3}
+  soundController: {fileID: 11400000, guid: 62a5579bf61be0b4eb1f861b94c7051f, type: 2}
 --- !u!82 &5962038302067848188
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3181,8 +3178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2ab5da7172531445939d3531be43a9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverClip: {fileID: 8300000, guid: da0895a1c9dfa58458e87d68c8822e6e, type: 3}
-  clickClip: {fileID: 8300000, guid: 4e7860e5531de5e4489636271930911a, type: 3}
+  soundController: {fileID: 11400000, guid: 62a5579bf61be0b4eb1f861b94c7051f, type: 2}
 --- !u!82 &7678646996921942571
 AudioSource:
   m_ObjectHideFlags: 0
