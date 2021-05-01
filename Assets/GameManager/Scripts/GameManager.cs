@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -18,7 +19,6 @@ public class GameManager : Singleton<GameManager>
 {
 
     [SerializeField] private GameObject[] systemPrefabs;
-//    public Events.EventGameState OnGameStateChanged;
     private readonly List<GameObject> instancedSystemPrefabs = new List<GameObject>();
     private readonly List<AsyncOperation> loadOperations = new List<AsyncOperation>();
     private string currentLevelName = string.Empty;
@@ -70,29 +70,25 @@ public class GameManager : Singleton<GameManager>
     #endregion
 
     #region ManagersControl
-    void InstantiateSystemPrefabs()
+
+    private void InstantiateSystemPrefabs()
     {
-        GameObject prefabInstance;
         foreach (GameObject obj in systemPrefabs)
-        {
-            prefabInstance = Instantiate(obj);
-            instancedSystemPrefabs.Add(prefabInstance);
-        }
+            instancedSystemPrefabs.Add(Instantiate(obj));
     }
 
     protected override void OnDestroy()
     {
         base.OnDestroy();
-        for (int i = 0; i < instancedSystemPrefabs.Count; i++)
-        {
-            Destroy(instancedSystemPrefabs[i]);
-        }
+        foreach (GameObject obj in instancedSystemPrefabs)
+            Destroy(obj);
         instancedSystemPrefabs.Clear();
     }
     #endregion
 
     #region StateControl
-    void UpdateState(GameState state)
+
+    private void UpdateState(GameState state)
     {
         GameState previousGameState = CurrentGameState;
         CurrentGameState = state;
@@ -107,9 +103,8 @@ public class GameManager : Singleton<GameManager>
             case GameState.Paused:
                 Time.timeScale = 0f;
                 break;
-
             default:
-                break;
+                throw new ArgumentOutOfRangeException();
         }
 
         Events.ChangeGameState(CurrentGameState, previousGameState);
@@ -122,26 +117,18 @@ public class GameManager : Singleton<GameManager>
 
     public void TogglePause()
     {
-        //if called from pregame might cause bugs
-        //UpdateState(currentGameState == GameState.Running ? GameState.Paused : GameState.Running);
-        if (CurrentGameState == GameState.Running)
-        {
-            UpdateState(GameState.Paused);
-        }
-        else if (CurrentGameState == GameState.Paused)
-        {
-            UpdateState(GameState.Running);
-        }
+        if (CurrentGameState == GameState.Pregame) return;
+        UpdateState(CurrentGameState == GameState.Running ? GameState.Paused : GameState.Running);
     }
 
     public void RestartGame()
     {
-
+        throw new NotImplementedException();
     }
 
     public void QuitGame()
     {
-
+        throw new NotImplementedException();
     }
     #endregion
 }

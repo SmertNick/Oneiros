@@ -1,12 +1,11 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
     [SerializeField] private Canvases canvases;
-    private GameObject MainMenu;
-    private List<GameObject> HUDs = new List<GameObject>();
+    private GameObject mainMenu;
+    private readonly List<GameObject> huDs = new List<GameObject>();
     
     private void Start()
     {
@@ -17,12 +16,12 @@ public class UIManager : Singleton<UIManager>
 
     private void SetupCanvases()
     {
-        MainMenu = Instantiate(canvases.MainMenu, transform.position, Quaternion.identity);
-        MainMenu.SetActive(true);
+        mainMenu = Instantiate(canvases.MainMenu, transform.position, Quaternion.identity);
+        mainMenu.SetActive(true);
         
         foreach (GameObject hud in canvases.HUDCanvases)
         {
-            HUDs.Add(Instantiate(hud));
+            huDs.Add(Instantiate(hud));
             hud.SetActive(false);
         }
     }
@@ -34,7 +33,7 @@ public class UIManager : Singleton<UIManager>
 
     private void HandleThemeChange(Theme newTheme)
     {
-        //switch canvases
+        //switch hud canvases
     }
     
     protected override void OnDestroy()

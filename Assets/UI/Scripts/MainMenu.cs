@@ -1,4 +1,3 @@
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +6,6 @@ public class MainMenu : MonoBehaviour
     private AudioSource aud;
     [SerializeField] private AudioClip backgroundClip;
     private float baseVolume = .2f;
-    [SerializeField] private TMP_Text[] options;
     [SerializeField] private Button startGameButton, optionsButton, creditsButton, quitButton;
     [SerializeField] private GameObject optionsMenu, creditsMenu;
 
@@ -50,7 +48,7 @@ public class MainMenu : MonoBehaviour
 
     private void StartGame()
     {
-
+        GameManager.Instance.StartGame();
     }
 
     private void Options()
@@ -66,6 +64,6 @@ public class MainMenu : MonoBehaviour
 
     private void Quit()
     {
-        
+        GameManager.Instance.QuitGame();
     }
 }

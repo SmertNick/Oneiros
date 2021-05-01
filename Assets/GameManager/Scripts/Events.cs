@@ -15,7 +15,6 @@ public static class Events
     }
     
     #endregion
-
     #region StateChange
 
     public delegate void GameStateDelegate(GameState newState, GameState previousState);
