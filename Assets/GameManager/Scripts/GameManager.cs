@@ -3,18 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public enum Theme
-{
-    Happy = 0,
-    Brutal = 1
-}
-public enum GameState
-{
-    Pregame = 0,
-    Running = 1,
-    Paused = 2
-}
-
 public class GameManager : Singleton<GameManager>
 {
 
@@ -165,4 +153,16 @@ public class GameManager : Singleton<GameManager>
         throw new NotImplementedException();
     }
     #endregion
+}
+
+public enum Theme
+{
+    Happy = 0,
+    Brutal = 1
+}
+public enum GameState
+{
+    Pregame = 0,
+    Running = 1,
+    Paused = 2
 }
