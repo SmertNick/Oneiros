@@ -20,6 +20,7 @@ public class AudioManager : Singleton<AudioManager>
         {
             AudioSource aud = gameObject.AddComponent<AudioSource>();
             sources.Add(aud);
+            aud.playOnAwake = false;
             aud.Stop();
             aud.clip = set.BackgroundMusic;
             aud.volume = .5f;

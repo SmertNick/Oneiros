@@ -12,6 +12,7 @@ public class ButtonHandler : MonoBehaviour
     {
         button = GetComponent<Button>();
         aud = GetComponent<AudioSource>();
+        theme = GameManager.Instance.theme;
         button.onClick.AddListener(PlayClickSound);
         Events.OnFXVolumeChange += ChangeVolume;
         Events.OnThemeChange += HandleThemeChange;

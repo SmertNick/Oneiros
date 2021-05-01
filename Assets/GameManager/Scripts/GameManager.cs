@@ -22,12 +22,28 @@ public class GameManager : Singleton<GameManager>
     private readonly List<GameObject> instancedSystemPrefabs = new List<GameObject>();
     private readonly List<AsyncOperation> loadOperations = new List<AsyncOperation>();
     private string currentLevelName = string.Empty;
+    public Theme theme = Theme.Happy;
     public GameState CurrentGameState { get; private set; } = GameState.Pregame;
 
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
         InstantiateSystemPrefabs();
+        Events.OnThemeChange += ThemeChangeHandler;
+        Events.ChangeTheme(theme);
+    }
+
+    private void ThemeChangeHandler(Theme newTheme)
+    {
+        theme = newTheme;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            Events.ChangeTheme(theme == Theme.Happy ? Theme.Brutal : Theme.Happy);
+        }
     }
 
     #region SceneControl

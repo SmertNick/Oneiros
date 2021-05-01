@@ -1,4 +1,4 @@
-public static class Events
+public class Events
 {
     #region SoundOptionsChange
     public delegate void SliderChange(float sliderValue);
@@ -40,6 +40,5 @@ public static class Events
     {
         OnThemeChange?.Invoke((Theme)themeId);
     }
-
     #endregion
 }
