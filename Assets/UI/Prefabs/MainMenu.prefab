@@ -2361,7 +2361,6 @@ GameObject:
   m_Component:
   - component: {fileID: 807146532884804537}
   - component: {fileID: 8192931413166490651}
-  - component: {fileID: 4734050426107453171}
   m_Layer: 0
   m_Name: Camera
   m_TagString: Untagged
@@ -2426,14 +2425,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &4734050426107453171
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3432620068557260875}
-  m_Enabled: 1
 --- !u!1 &3535494468150759358
 GameObject:
   m_ObjectHideFlags: 0
@@ -3990,11 +3981,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   backgroundClip: {fileID: 8300000, guid: daffa76db9a5c86468915b3ecb6a6546, type: 3}
-  options:
-  - {fileID: 170413435720312154}
-  - {fileID: 8266514497420838277}
-  - {fileID: 6726390812699213005}
-  - {fileID: 3779783267279196398}
   startGameButton: {fileID: 5089108858466892004}
   optionsButton: {fileID: 6135337613236690291}
   creditsButton: {fileID: 1220283240512309889}

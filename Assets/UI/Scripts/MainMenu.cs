@@ -5,21 +5,14 @@ public class MainMenu : MonoBehaviour
 {
     private AudioSource aud;
     [SerializeField] private AudioClip backgroundClip;
-    private float baseVolume = .2f;
     [SerializeField] private Button startGameButton, optionsButton, creditsButton, quitButton;
     [SerializeField] private GameObject optionsMenu, creditsMenu;
 
     private void Start()
     {
         aud = GetComponent<AudioSource>();
-        if (aud != null)
-        {
-            baseVolume = aud.volume;
-            if (backgroundClip != null)
-            {
-                aud.clip = backgroundClip;
-            }
-        }
+        if (aud != null && backgroundClip != null)
+            aud.clip = backgroundClip;
         optionsMenu.SetActive(false);
         creditsMenu.SetActive(false);
         Events.OnMusicVolumeChange += ChangeVolume;
@@ -33,7 +26,7 @@ public class MainMenu : MonoBehaviour
     {
         if (aud != null)
         {
-            aud.volume = baseVolume * value;
+            aud.volume = value;
         }
     }
 

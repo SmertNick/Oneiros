@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : Singleton<UIManager>
 {
@@ -28,7 +29,7 @@ public class UIManager : Singleton<UIManager>
 
     private void HandleGameStateChange(GameState state, GameState previousState)
     {
-        //pause menu
+        //pause menu pregame->game : turn on hud
     }
 
     private void HandleThemeChange(Theme newTheme)

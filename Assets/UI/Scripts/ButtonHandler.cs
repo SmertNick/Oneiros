@@ -7,15 +7,12 @@ public class ButtonHandler : MonoBehaviour
     private Button button;
     private AudioSource aud;
     [SerializeField] private AudioClip hoverClip, clickClip;
-    private float baseVolume = .2f;
     private TMP_Text text;
 
     private void Start()
     {
         button = GetComponent<Button>();
         aud = GetComponent<AudioSource>();
-        if (aud != null)
-            baseVolume = aud.volume;
         button.onClick.AddListener(PlayClickSound);
         Events.OnFXVolumeChange += ChangeVolume;
     }
@@ -38,7 +35,7 @@ public class ButtonHandler : MonoBehaviour
     private void ChangeVolume(float value)
     {
         if (aud != null)
-            aud.volume = baseVolume * value;
+            aud.volume = value;
     }
 
     private void OnDestroy()
