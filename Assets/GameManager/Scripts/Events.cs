@@ -34,11 +34,5 @@ public class Events
     {
         OnThemeChange?.Invoke(newTheme);
     }
-
-
-    public static void ChangeTheme(int themeId)
-    {
-        OnThemeChange?.Invoke((Theme)themeId);
-    }
     #endregion
 }

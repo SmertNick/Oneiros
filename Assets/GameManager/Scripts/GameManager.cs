@@ -33,18 +33,36 @@ public class GameManager : Singleton<GameManager>
         Events.ChangeTheme(theme);
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            ChangeTheme();
+        }
+    }
+
+    #region ThemeControl
     private void ThemeChangeHandler(Theme newTheme)
     {
         theme = newTheme;
     }
 
-    private void Update()
+    private void ChangeTheme(Theme newTheme)
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Events.ChangeTheme(theme == Theme.Happy ? Theme.Brutal : Theme.Happy);
-        }
+        Events.ChangeTheme(theme);
     }
+
+    private void ChangeTheme(int themeID)
+    {
+        Events.ChangeTheme((Theme) (themeID % 2));
+    }
+
+    private void ChangeTheme()
+    {
+        ChangeTheme(theme + 1);
+    }
+    
+    #endregion
 
     #region SceneControl
     void OnLoadOperationComplete(AsyncOperation ao)
