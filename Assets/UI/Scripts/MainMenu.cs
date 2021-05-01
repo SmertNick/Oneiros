@@ -6,7 +6,7 @@ public class MainMenu : MonoBehaviour
 {
     private AudioSource aud;
     [SerializeField] private AudioClip backgroundClip;
-    private float baseVolume = .2f, baseFontSize = 45f;
+    private float baseVolume = .2f;
     [SerializeField] private TMP_Text[] options;
     [SerializeField] private Button startGameButton, optionsButton, creditsButton, quitButton;
     [SerializeField] private GameObject optionsMenu, creditsMenu;
@@ -42,14 +42,10 @@ public class MainMenu : MonoBehaviour
     private void OnDestroy()
     {
         Events.OnMusicVolumeChange -= ChangeVolume;
-    }
-
-    private void ChangeFont(Slider fontSizeSlider, Slider colorSlider)
-    {
-        foreach(TMP_Text text in options)
-        {
-            text.fontSize = baseFontSize * fontSizeSlider.value;
-        }
+        startGameButton.onClick.RemoveListener(StartGame);
+        optionsButton.onClick.RemoveListener(Options);
+        creditsButton.onClick.RemoveListener(Credits);
+        quitButton.onClick.RemoveListener(Quit);
     }
 
     private void StartGame()
@@ -70,6 +66,6 @@ public class MainMenu : MonoBehaviour
 
     private void Quit()
     {
-            
+        
     }
 }

@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e4cf54602b679c419f572b4ae1e608c, type: 3}
-  m_Name: Canvases
+  m_Script: {fileID: 11500000, guid: df8ab2e1568caf74ba72a17d7e2f6852, type: 3}
+  m_Name: UISounds
   m_EditorClassIdentifier: 
-  mainMenu: {fileID: 1853322481163927120, guid: 1cdbbc8872352f84d972396d4bd1f2ab,
-    type: 3}
-  hUDCanvases: []
+  sets: []

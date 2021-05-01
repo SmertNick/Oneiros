@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 
-[CreateAssetMenu(menuName = "Oneiros/Sound Set")]
-public class SoundSet : ScriptableObject
+[CreateAssetMenu(menuName = "Oneiros/Character Sound Set")]
+public class CharacterSoundSet : ScriptableObject
 {
     [SerializeField] private AudioClip walk;
     [SerializeField] private AudioClip attack;
