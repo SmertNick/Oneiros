@@ -3,19 +3,15 @@ using UnityEngine.UI;
 
 public class UIManager : Singleton<UIManager>
 {
-    [SerializeField] private Slider fxVolume, musicVolume;
-    
     private void Start()
     {
-        fxVolume.onValueChanged.AddListener(Events.ChangeFXVolume);
-        musicVolume.onValueChanged.AddListener(Events.ChangeMusicVolume);
-        Events.OnThemeChange += HandleThemeChange;
         Events.OnGameStateChange += HandleGameStateChange;
+        Events.OnThemeChange += HandleThemeChange;
     }
 
     private void HandleGameStateChange(GameState state, GameState previousState)
     {
-        
+        //pause menu
     }
 
     private void HandleThemeChange(Theme newTheme)
