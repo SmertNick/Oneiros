@@ -1,7 +1,4 @@
-﻿using System;
-using UnityEngine.XR;
-
-public class AudioManager : Singleton<AudioManager>
+﻿public class AudioManager : Singleton<AudioManager>
 {
     private void Start()
     {

@@ -1,6 +1,4 @@
-using UnityEngine.Events;
-
-public class Events
+public static class Events
 {
     #region SoundOptionsChange
     public delegate void SliderChange(float sliderValue);
