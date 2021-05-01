@@ -79,6 +79,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a8cc471d9b28a24a9830001f4c5e5a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MainMenu: {fileID: 1853322481163927120, guid: 1cdbbc8872352f84d972396d4bd1f2ab,
-    type: 3}
-  HUD: []
+  canvases: {fileID: 11400000, guid: 698688420ff2eca43a030e2697ac87aa, type: 2}
