@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: da46a235eb50cc945911357001fc52f2, type: 3}
-  m_Name: Player Happy Set
+  m_Name: Player Brutal Set
   m_EditorClassIdentifier: 
   walk: {fileID: 0}
   attack: {fileID: 0}

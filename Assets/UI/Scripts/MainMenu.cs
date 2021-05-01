@@ -27,7 +27,6 @@ public class MainMenu : MonoBehaviour
         optionsMenu.SetActive(false);
         creditsMenu.SetActive(false);
         UIManager.Instance.OnVolumeChanged.AddListener(ChangeVolume);
-        UIManager.Instance.OnFontChanged.AddListener(ChangeFont);
         startGameButton.onClick.AddListener(StartGame);
         optionsButton.onClick.AddListener(Options);
         creditsButton.onClick.AddListener(Credits);

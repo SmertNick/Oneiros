@@ -3,16 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+public enum Theme
+{
+    Happy = 0,
+    Brutal = 1
+}
+public enum GameState
+{
+    Pregame = 0,
+    Running = 1,
+    Paused = 2
+}
+
 public class GameManager : Singleton<GameManager>
 {
-    public enum GameState
-    {
-        Pregame,
-        Running,
-        Paused
-    }
 
-    [SerializeField] private GameObject[] SystemPrefabs;
+//    public static Events.ThemeDelegate OnThemeChange;
+    [SerializeField] private GameObject[] systemPrefabs;
     public Events.EventGameState OnGameStateChanged;
     private readonly List<GameObject> instancedSystemPrefabs = new List<GameObject>();
     private readonly List<AsyncOperation> loadOperations = new List<AsyncOperation>();
@@ -68,7 +75,7 @@ public class GameManager : Singleton<GameManager>
     void InstantiateSystemPrefabs()
     {
         GameObject prefabInstance;
-        foreach (GameObject obj in SystemPrefabs)
+        foreach (GameObject obj in systemPrefabs)
         {
             prefabInstance = Instantiate(obj);
             instancedSystemPrefabs.Add(prefabInstance);

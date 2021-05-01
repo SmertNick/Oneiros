@@ -28,7 +28,6 @@ public class ButtonHandler : MonoBehaviour
             }
         }
         UIManager.Instance.OnVolumeChanged.AddListener(ChangeVolume);
-        UIManager.Instance.OnFontChanged.AddListener(ChangeFont);
     }
     public void OnHover()
     {

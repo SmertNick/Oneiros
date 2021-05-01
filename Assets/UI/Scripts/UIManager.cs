@@ -8,29 +8,34 @@ using UnityEngine.EventSystems;
 public class UIManager : Singleton<UIManager>
 {
     public Events.EventVolumeChange OnVolumeChanged;
-    public Events.EventFontChange OnFontChanged;
-    [SerializeField] private Slider FXVolume, musicVolume, fontSize;
+    [SerializeField] private Slider fxVolume, musicVolume;
     
     private void Start()
     {
         GameManager.Instance.OnGameStateChanged.AddListener(HandleGameStateChange);
-        FXVolume.onValueChanged.AddListener(ChangeVolume);
+        fxVolume.onValueChanged.AddListener(ChangeVolume);
         musicVolume.onValueChanged.AddListener(ChangeVolume);
-        fontSize.onValueChanged.AddListener(ChangeFont);
+        Events.OnThemeChange += HandleThemeChange;
     }
 
-    private void HandleGameStateChange(GameManager.GameState state, GameManager.GameState previousState)
+    private void HandleGameStateChange(GameState state, GameState previousState)
     {
         
+    }
+
+    private void HandleThemeChange(Theme newTheme)
+    {
+        //switch canvases
     }
     
     private void ChangeVolume(float f)
     {
-        OnVolumeChanged.Invoke(musicVolume, FXVolume);
+        OnVolumeChanged.Invoke(musicVolume, fxVolume);
     }
 
-    private void ChangeFont(float f)
+    protected override void OnDestroy()
     {
-        OnFontChanged.Invoke(fontSize, fontSize);
+        Events.OnThemeChange -= HandleThemeChange;
+        base.OnDestroy();
     }
 }
