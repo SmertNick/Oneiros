@@ -10,7 +10,16 @@ public class AudioManager : Singleton<AudioManager>
     {
         Events.OnThemeChange += HandleThemeChange;
         Events.OnGameStateChange += HandleStateChange;
+        Events.OnMusicVolumeChange += ChangeVolume;
         SetUpSound();
+    }
+
+    private void ChangeVolume(float sliderValue)
+    {
+        foreach (var aud in sources)
+        {
+            aud.volume = sliderValue;
+        }
     }
 
     private void SetUpSound()
@@ -62,6 +71,8 @@ public class AudioManager : Singleton<AudioManager>
     protected override void OnDestroy()
     {
         Events.OnThemeChange -= HandleThemeChange;
+        Events.OnGameStateChange -= HandleStateChange;
+        Events.OnMusicVolumeChange -= ChangeVolume;
         base.OnDestroy();
     }
 }
