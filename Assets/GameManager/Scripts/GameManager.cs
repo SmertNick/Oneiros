@@ -53,19 +53,6 @@ public class GameManager : Singleton<GameManager>
     #endregion
 
     #region SceneControl
-    void OnLoadOperationComplete(AsyncOperation ao)
-    {
-        if (loadOperations.Contains(ao))
-        {
-            loadOperations.Remove(ao);
-        }
-        Debug.Log("Load Complete");
-    }
-
-    void OnUnloadOperationComplete(AsyncOperation ao)
-    {
-        Debug.Log("Unload Complete");
-    }
     public void LoadLevel(string levelName)
     {
         AsyncOperation ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive);
@@ -79,6 +66,16 @@ public class GameManager : Singleton<GameManager>
         currentLevelName = levelName;
     }
 
+    private void OnLoadOperationComplete(AsyncOperation ao)
+    {
+        if (loadOperations.Contains(ao))
+        {
+            loadOperations.Remove(ao);
+            ao.completed -= OnLoadOperationComplete;
+        }
+        Debug.Log("Load Complete");
+    }
+
     public void UnloadLevel(string levelName)
     {
         AsyncOperation ao = SceneManager.UnloadSceneAsync(levelName);
@@ -88,6 +85,12 @@ public class GameManager : Singleton<GameManager>
             return;
         }
         ao.completed += OnUnloadOperationComplete;
+    }
+
+    private void OnUnloadOperationComplete(AsyncOperation ao)
+    {
+        ao.completed -= OnUnloadOperationComplete;
+        Debug.Log("Unload Complete");
     }
     #endregion
 
