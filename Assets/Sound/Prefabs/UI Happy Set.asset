@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: UI Happy Set
   m_EditorClassIdentifier: 
   backgroundMusic: {fileID: 0}
-  buttonHoverSound: {fileID: 0}
-  buttonClickSound: {fileID: 0}
+  buttonHoverSound: {fileID: 8300000, guid: da0895a1c9dfa58458e87d68c8822e6e, type: 3}
+  buttonClickSound: {fileID: 8300000, guid: 4e7860e5531de5e4489636271930911a, type: 3}
