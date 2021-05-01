@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
@@ -27,7 +28,7 @@ public class ButtonHandler : MonoBehaviour
                 baseFontSize = text.fontSize;
             }
         }
-        UIManager.Instance.OnVolumeChanged.AddListener(ChangeVolume);
+        Events.OnFXVolumeChange += ChangeVolume;
     }
     public void OnHover()
     {
@@ -49,11 +50,11 @@ public class ButtonHandler : MonoBehaviour
         }
     }
 
-    private void ChangeVolume(Slider volumeSliderMusic, Slider volumeSliderFX)
+    private void ChangeVolume(float value)
     {
         if (aud != null)
         {
-            aud.volume = baseVolume * volumeSliderFX.value;
+            aud.volume = baseVolume * value;
         }
     }
 
@@ -64,5 +65,10 @@ public class ButtonHandler : MonoBehaviour
             text.enableAutoSizing = false;
             text.fontSize = baseFontSize*fontSize.value;
         }
+    }
+
+    private void OnDestroy()
+    {
+        Events.OnFXVolumeChange -= ChangeVolume;
     }
 }

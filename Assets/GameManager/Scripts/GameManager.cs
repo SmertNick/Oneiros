@@ -18,9 +18,8 @@ public enum GameState
 public class GameManager : Singleton<GameManager>
 {
 
-//    public static Events.ThemeDelegate OnThemeChange;
     [SerializeField] private GameObject[] systemPrefabs;
-    public Events.EventGameState OnGameStateChanged;
+//    public Events.EventGameState OnGameStateChanged;
     private readonly List<GameObject> instancedSystemPrefabs = new List<GameObject>();
     private readonly List<AsyncOperation> loadOperations = new List<AsyncOperation>();
     private string currentLevelName = string.Empty;
@@ -114,7 +113,7 @@ public class GameManager : Singleton<GameManager>
                 break;
         }
 
-        OnGameStateChanged.Invoke(CurrentGameState, previousGameState);
+        Events.ChangeGameState(CurrentGameState, previousGameState);
     }
 
     public void StartGame()

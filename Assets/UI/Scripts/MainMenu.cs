@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -26,19 +27,24 @@ public class MainMenu : MonoBehaviour
         }
         optionsMenu.SetActive(false);
         creditsMenu.SetActive(false);
-        UIManager.Instance.OnVolumeChanged.AddListener(ChangeVolume);
+        Events.OnMusicVolumeChange += ChangeVolume;
         startGameButton.onClick.AddListener(StartGame);
         optionsButton.onClick.AddListener(Options);
         creditsButton.onClick.AddListener(Credits);
         quitButton.onClick.AddListener(Quit);
     }
 
-    private void ChangeVolume(Slider volumeSliderMusic, Slider volumeSliderFX)
+    private void ChangeVolume(float value)
     {
         if (aud != null)
         {
-            aud.volume = baseVolume * volumeSliderMusic.value;
+            aud.volume = baseVolume * value;
         }
+    }
+
+    private void OnDestroy()
+    {
+        Events.OnMusicVolumeChange -= ChangeVolume;
     }
 
     private void ChangeFont(Slider fontSizeSlider, Slider colorSlider)

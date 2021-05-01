@@ -7,15 +7,14 @@ using UnityEngine.EventSystems;
 
 public class UIManager : Singleton<UIManager>
 {
-    public Events.EventVolumeChange OnVolumeChanged;
     [SerializeField] private Slider fxVolume, musicVolume;
     
     private void Start()
     {
-        GameManager.Instance.OnGameStateChanged.AddListener(HandleGameStateChange);
-        fxVolume.onValueChanged.AddListener(ChangeVolume);
-        musicVolume.onValueChanged.AddListener(ChangeVolume);
+        fxVolume.onValueChanged.AddListener(Events.ChangeFXVolume);
+        musicVolume.onValueChanged.AddListener(Events.ChangeMusicVolume);
         Events.OnThemeChange += HandleThemeChange;
+        Events.OnGameStateChange += HandleGameStateChange;
     }
 
     private void HandleGameStateChange(GameState state, GameState previousState)
@@ -28,13 +27,9 @@ public class UIManager : Singleton<UIManager>
         //switch canvases
     }
     
-    private void ChangeVolume(float f)
-    {
-        OnVolumeChanged.Invoke(musicVolume, fxVolume);
-    }
-
     protected override void OnDestroy()
     {
+        Events.OnGameStateChange -= HandleGameStateChange;
         Events.OnThemeChange -= HandleThemeChange;
         base.OnDestroy();
     }
