@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901f79b82e51a0e41a6c487b68fbf20c, type: 3}
   m_Name: PlayerAnimations
   m_EditorClassIdentifier: 
-  animators: []
-  sprites: []
+  animators:
+  - {fileID: 9100000, guid: b77822e0485373d40b5beb92e9a5e728, type: 2}
+  - {fileID: 9100000, guid: 8fdf18fefc22c024b970069546ecab04, type: 2}
+  sprites:
+  - {fileID: 1845589032886086716, guid: 88e0c395bdcec6b46bae4620730f0722, type: 3}
+  - {fileID: 1413263558917095255, guid: 0d823e15dfe4389408d9f6184b3b6ba7, type: 3}

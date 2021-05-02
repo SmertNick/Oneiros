@@ -28,6 +28,8 @@ public class UIManager : Singleton<UIManager>
 
     private void HandleGameStateChange(GameState state, GameState previousState)
     {
+        if (state == GameState.Running)
+            mainMenu.SetActive(false);
         //pause menu pregame->game : turn on hud
     }
 

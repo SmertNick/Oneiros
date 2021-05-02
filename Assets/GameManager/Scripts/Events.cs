@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public static class Events
 {
     #region SoundOptionsChange
@@ -33,6 +35,7 @@ public static class Events
     public static void ChangeTheme(Theme newTheme)
     {
         OnThemeChange?.Invoke(newTheme);
+        Debug.Log("switched to " + newTheme);
     }
     #endregion
 }

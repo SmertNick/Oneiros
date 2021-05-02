@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a614bdf0e072cd24d8823344844efced, type: 3}
   m_Name: UI Happy Set
   m_EditorClassIdentifier: 
-  backgroundMusic: {fileID: 0}
+  backgroundMusic: {fileID: 8300000, guid: e406c04157c663a43b859646b7ad3c2a, type: 3}
   buttonHoverSound: {fileID: 8300000, guid: da0895a1c9dfa58458e87d68c8822e6e, type: 3}
   buttonClickSound: {fileID: 8300000, guid: 4e7860e5531de5e4489636271930911a, type: 3}

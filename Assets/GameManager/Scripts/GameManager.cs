@@ -47,7 +47,7 @@ public class GameManager : Singleton<GameManager>
 
     private void ChangeTheme()
     {
-        ChangeTheme(theme + 1);
+        ChangeTheme((int)theme + 1);
     }
     
     #endregion
@@ -75,6 +75,7 @@ public class GameManager : Singleton<GameManager>
             loadOperations.Remove(ao);
             ao.completed -= OnLoadOperationComplete;
         }
+        Events.ChangeGameState(GameState.Running, GameState.Pregame);
         //End transition animation
         Debug.Log("Load Complete");
     }

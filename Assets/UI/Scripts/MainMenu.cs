@@ -37,9 +37,9 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
-        float tmp = .4f * Mathf.PingPong(Time.timeSinceLevelLoad * .3f, 1f);
+        float tmp = .6f * Mathf.PingPong(Time.timeSinceLevelLoad * .3f, 1f);
         brutalBackground.color = Color.Lerp(colorClear, colorFull, tmp);
-        s.color = Color.Lerp(colorClear, colorFull, 1f - tmp);
+        s.color = Color.Lerp(colorClear, colorFull, 1f - 2f * tmp);
         phrenia.color = Color.Lerp(colorClear, colorFull, tmp);
     }
 

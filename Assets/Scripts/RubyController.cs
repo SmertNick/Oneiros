@@ -5,6 +5,7 @@ using UnityEngine;
 public class RubyController : MonoBehaviour
 {
     [SerializeField] private RubyStats stats;
+    [SerializeField] private AnimationController animations;
     private Rigidbody2D body;
     private Animator anim;
     private int health, bulletsRemainig;
@@ -30,6 +31,12 @@ public class RubyController : MonoBehaviour
         isInvincible = false;
         bulletsRemainig = stats.MaxBullets;
         GenerateBullets(20);
+        Events.OnThemeChange += HandleThemeChange;
+    }
+
+    private void HandleThemeChange(Theme newtheme)
+    {
+        
     }
 
     private void GenerateBullets(int amountOfBullets)
