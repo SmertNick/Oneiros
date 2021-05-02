@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b51a97a26fb11f34ab67be84ff20ea67, type: 3}
+  m_Name: Ruby Stats
+  m_EditorClassIdentifier: 
+  maxHealth: 5
+  maxBullets: 20
+  invincibilityTime: 3
+  speed: {x: 3, y: 3}
+  throwCogSound: {fileID: 8300000, guid: b2edfd40873655249ba0e01a5cf705be, type: 3}
+  bullet: {fileID: 4657895984730347903, guid: 5364ad4d18c48cd46a53217dd515f227, type: 3}
