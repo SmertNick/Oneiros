@@ -36,7 +36,7 @@ public class RubyController : MonoBehaviour
 
     private void HandleThemeChange(Theme newtheme)
     {
-        
+        anim.runtimeAnimatorController = animations.Animators[(int) newtheme];
     }
 
     private void GenerateBullets(int amountOfBullets)

@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RubyIdleDown 1
+  m_Name: DoomGuyIdleDown
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,13 +20,13 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
-      value: {fileID: 1845589032886086716, guid: 88e0c395bdcec6b46bae4620730f0722,
+      value: {fileID: 4868723956639759650, guid: 0d823e15dfe4389408d9f6184b3b6ba7,
         type: 3}
     - time: 0.25
-      value: {fileID: -179043281574684351, guid: 88e0c395bdcec6b46bae4620730f0722,
+      value: {fileID: -3515964256587804099, guid: 0d823e15dfe4389408d9f6184b3b6ba7,
         type: 3}
     - time: 0.5
-      value: {fileID: 1845589032886086716, guid: 88e0c395bdcec6b46bae4620730f0722,
+      value: {fileID: 4868723956639759650, guid: 0d823e15dfe4389408d9f6184b3b6ba7,
         type: 3}
     attribute: m_Sprite
     path: 
@@ -47,9 +47,9 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
-    - {fileID: 1845589032886086716, guid: 88e0c395bdcec6b46bae4620730f0722, type: 3}
-    - {fileID: -179043281574684351, guid: 88e0c395bdcec6b46bae4620730f0722, type: 3}
-    - {fileID: 1845589032886086716, guid: 88e0c395bdcec6b46bae4620730f0722, type: 3}
+    - {fileID: 4868723956639759650, guid: 0d823e15dfe4389408d9f6184b3b6ba7, type: 3}
+    - {fileID: -3515964256587804099, guid: 0d823e15dfe4389408d9f6184b3b6ba7, type: 3}
+    - {fileID: 4868723956639759650, guid: 0d823e15dfe4389408d9f6184b3b6ba7, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
