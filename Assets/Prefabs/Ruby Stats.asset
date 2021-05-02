@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Ruby Stats
   m_EditorClassIdentifier: 
   maxHealth: 5
-  maxBullets: 10000
+  maxBullets: 100000
   invincibilityTime: 3
   speed: {x: 3, y: 3}
   throwCogSound: {fileID: 8300000, guid: b2edfd40873655249ba0e01a5cf705be, type: 3}
