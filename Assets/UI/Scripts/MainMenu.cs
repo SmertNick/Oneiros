@@ -11,8 +11,12 @@ public class MainMenu : MonoBehaviour
     private void Start()
     {
         aud = GetComponent<AudioSource>();
-        if (aud != null && backgroundClip != null)
+        if (aud != null)
+        {
+            aud.volume = AudioManager.Instance.MusicVolume;
             aud.clip = backgroundClip;
+        }
+
         optionsMenu.SetActive(false);
         creditsMenu.SetActive(false);
         Events.OnMusicVolumeChange += ChangeVolume;

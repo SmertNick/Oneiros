@@ -5,20 +5,31 @@ public class AudioManager : Singleton<AudioManager>
 {
     [SerializeField] private UISoundController soundController;
     private readonly List<AudioSource> sources = new List<AudioSource>();
+    private float musicVolume = .5f, fxVolume = .5f;
+    public float MusicVolume => musicVolume;
+    public float FXVolume => fxVolume;
 
-    private void Start()
+    protected override void Awake()
     {
+        base.Awake();
         Events.OnThemeChange += HandleThemeChange;
         Events.OnGameStateChange += HandleStateChange;
-        Events.OnMusicVolumeChange += ChangeVolume;
+        Events.OnMusicVolumeChange += ChangeMusicVolume;
+        Events.OnFXVolumeChange += ChangeFXVolume;
         SetUpSound();
     }
 
-    private void ChangeVolume(float sliderValue)
+    private void ChangeFXVolume(float value)
     {
+        fxVolume = value;
+    }
+
+    private void ChangeMusicVolume(float value)
+    {
+        musicVolume = value;
         foreach (var aud in sources)
         {
-            aud.volume = sliderValue;
+            aud.volume = value;
         }
     }
 
@@ -31,7 +42,7 @@ public class AudioManager : Singleton<AudioManager>
             aud.playOnAwake = false;
             aud.Stop();
             aud.clip = set.BackgroundMusic;
-            aud.volume = .5f;
+            aud.volume = musicVolume;
             aud.mute = true;
             aud.loop = true;
         }
@@ -72,7 +83,7 @@ public class AudioManager : Singleton<AudioManager>
     {
         Events.OnThemeChange -= HandleThemeChange;
         Events.OnGameStateChange -= HandleStateChange;
-        Events.OnMusicVolumeChange -= ChangeVolume;
+        Events.OnMusicVolumeChange -= ChangeMusicVolume;
         base.OnDestroy();
     }
 }

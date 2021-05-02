@@ -7,8 +7,8 @@ public class OptionsMenu : MonoBehaviour
 
     private void Start()
     {
-        Events.ChangeMusicVolume(musicVolume.value);
-        Events.ChangeFXVolume(fxVolume.value);
+        musicVolume.value = AudioManager.Instance.MusicVolume;
+        fxVolume.value = AudioManager.Instance.FXVolume;
         musicVolume.onValueChanged.AddListener(Events.ChangeMusicVolume);
         fxVolume.onValueChanged.AddListener(Events.ChangeFXVolume);
     }
