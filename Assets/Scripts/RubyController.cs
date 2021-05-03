@@ -15,9 +15,9 @@ public class RubyController : MonoBehaviour
 
     private static readonly int 
         Speed = Animator.StringToHash("Speed"),
-        X = Animator.StringToHash("Look X"),
-        Y = Animator.StringToHash("Look Y"),
-        Launch = Animator.StringToHash("Launch");
+        LookX = Animator.StringToHash("Look X"),
+        LookY = Animator.StringToHash("Look Y"),
+        Attack = Animator.StringToHash("Attack");
     private readonly List<GameObject> bullets = new List<GameObject>();
     private Vector2 move, lookDirection = new Vector2(0f, -1f);
     [SerializeField] private Transform bulletSpawnPosition;
@@ -71,7 +71,7 @@ public class RubyController : MonoBehaviour
             bullet.transform.rotation = Quaternion.identity;
             bullet.transform.Rotate(Vector3.forward, Vector2.SignedAngle(Vector2.right, lookDirection));
             bullet.SetActive(true);
-            anim.SetTrigger(Launch);
+            anim.SetTrigger(Attack);
             aud.Stop();
             aud.clip = stats.ThrowCogSound;
             aud.Play();
@@ -88,8 +88,8 @@ public class RubyController : MonoBehaviour
 
         if (Mathf.Approximately((move.magnitude), 0f)) return;
         lookDirection = move;
-        anim.SetFloat(X, lookDirection.x);
-        anim.SetFloat(Y, lookDirection.y);
+        anim.SetFloat(LookX, lookDirection.x);
+        anim.SetFloat(LookY, lookDirection.y);
     }
 
     private IEnumerator Invincibility()

@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Bot : MonoBehaviour, IDamageable
@@ -12,9 +10,14 @@ public class Bot : MonoBehaviour, IDamageable
     private Rigidbody2D rigidbody2d;
     private Animator anim;
     private int health;
-    private static readonly int X = Animator.StringToHash("x");
-    private static readonly int Y = Animator.StringToHash("y");
-    private static readonly int IsFixed = Animator.StringToHash("isFixed");
+    //private static readonly int LookX = Animator.StringToHash("x");
+    //private static readonly int LookY = Animator.StringToHash("y");
+    //private static readonly int IsDefeated = Animator.StringToHash("isFixed");
+    private static readonly int
+        LookX = Animator.StringToHash("Look X"),
+        LookY = Animator.StringToHash("Look Y"),
+        IsDefeated = Animator.StringToHash("Defeated");
+
 
     private void Start()
     {
@@ -42,8 +45,8 @@ public class Bot : MonoBehaviour, IDamageable
         //setting animation direction
         Vector2 direction = ((endPosition - startPosition) * Mathf.Cos(timeStamp)).normalized;
         //There are probably repeating calculations within lerp and direction. Might be possible to optimize
-        anim.SetFloat(X, direction.x);
-        anim.SetFloat(Y, direction.y);
+        anim.SetFloat(LookX, direction.x);
+        anim.SetFloat(LookY, direction.y);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -58,7 +61,7 @@ public class Bot : MonoBehaviour, IDamageable
     public void TakeDamage(int value)
     {
         isFixed = true;
-        anim.SetBool(IsFixed, true);
+        anim.SetBool(IsDefeated, true);
         smoke.Stop();
     }
 }
