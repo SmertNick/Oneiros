@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 901f79b82e51a0e41a6c487b68fbf20c, type: 3}
   m_Name: BotAnimations
   m_EditorClassIdentifier: 
-  animators: []
+  animators:
+  - {fileID: 9100000, guid: 17cfce6d33fe723428c48b725cd05af0, type: 2}
+  - {fileID: 9100000, guid: 978755d5abd4f1449ad4cf9e9a24bb2a, type: 2}
   sprites: []
