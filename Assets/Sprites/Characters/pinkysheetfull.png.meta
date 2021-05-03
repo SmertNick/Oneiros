@@ -1,0 +1,1820 @@
+fileFormatVersion: 2
+guid: 96a6c5fd96f28364a97c70f9fcabbede
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8235379797411831281
+    second: PinkyWalkDown1
+  - first:
+      213: -9051951701225916264
+    second: pinkysheetfull_1
+  - first:
+      213: 3673977232090442683
+    second: PinkyWalkLeft1
+  - first:
+      213: -7992671191464090428
+    second: pinkysheetfull_3
+  - first:
+      213: -7630040242830283520
+    second: PinkyWalkUp1
+  - first:
+      213: 2682497599862065339
+    second: pinkysheetfull_5
+  - first:
+      213: -4232673564559007409
+    second: PinkyWalkRight1
+  - first:
+      213: -5548473957047972926
+    second: pinkysheetfull_7
+  - first:
+      213: 8755760752469811824
+    second: PinkyWalkDown2
+  - first:
+      213: -2063024318033276952
+    second: pinkysheetfull_9
+  - first:
+      213: -4832899335713797605
+    second: PinkyWalkLeft2
+  - first:
+      213: -7616760159066182127
+    second: pinkysheetfull_11
+  - first:
+      213: 6743204603518528308
+    second: PinkyWalkUp2
+  - first:
+      213: 7519840006447613650
+    second: pinkysheetfull_13
+  - first:
+      213: 6609067511784199472
+    second: PinkyWalkRight2
+  - first:
+      213: -8450809086896167346
+    second: pinkysheetfull_15
+  - first:
+      213: 8685648013994679925
+    second: PinkyWalkDown3
+  - first:
+      213: -6163279882111363354
+    second: pinkysheetfull_17
+  - first:
+      213: 8578205862367842488
+    second: PinkyWalkLeft3
+  - first:
+      213: 2783425072279878776
+    second: pinkysheetfull_19
+  - first:
+      213: -3029554822121740570
+    second: PinkyWalkUp3
+  - first:
+      213: 987278038462170166
+    second: pinkysheetfull_21
+  - first:
+      213: -8040576880075551714
+    second: PinkyWalkRight3
+  - first:
+      213: 7635269589967043696
+    second: pinkysheetfull_23
+  - first:
+      213: -7521508657836853678
+    second: PinkyWalkDown4
+  - first:
+      213: -4165404549978357997
+    second: pinkysheetfull_25
+  - first:
+      213: -4327623318690147636
+    second: PinkyWalkLeft4
+  - first:
+      213: 4261325834337985272
+    second: pinkysheetfull_27
+  - first:
+      213: -3799928572356802649
+    second: PinkyWalkUp4
+  - first:
+      213: -5218164325667916133
+    second: pinkysheetfull_29
+  - first:
+      213: 6499738107303094841
+    second: PinkyWalkRight4
+  - first:
+      213: -8567466981824011831
+    second: pinkysheetfull_31
+  - first:
+      213: 8941083807538970944
+    second: PinkyAttackDown1
+  - first:
+      213: -7462595877537247561
+    second: pinkysheetfull_33
+  - first:
+      213: -5968984212219891903
+    second: pinkysheetfull_34
+  - first:
+      213: 4188447630404162866
+    second: pinkysheetfull_35
+  - first:
+      213: 3504099663094134451
+    second: pinkysheetfull_36
+  - first:
+      213: 1063476934255962893
+    second: pinkysheetfull_37
+  - first:
+      213: -5150138822561249863
+    second: pinkysheetfull_38
+  - first:
+      213: -3421377953274509844
+    second: pinkysheetfull_39
+  - first:
+      213: -2264497641506813343
+    second: PinkyAttackDown2
+  - first:
+      213: 1287610447099435173
+    second: pinkysheetfull_41
+  - first:
+      213: -1823528492509380378
+    second: pinkysheetfull_42
+  - first:
+      213: -2080795470290462969
+    second: pinkysheetfull_43
+  - first:
+      213: -9189569990791719127
+    second: pinkysheetfull_44
+  - first:
+      213: -293309117200429640
+    second: pinkysheetfull_45
+  - first:
+      213: 5178336970175594694
+    second: pinkysheetfull_46
+  - first:
+      213: 7029007819987076398
+    second: pinkysheetfull_47
+  - first:
+      213: -8349197017412154018
+    second: pinkysheetfull_48
+  - first:
+      213: -2967161776176529828
+    second: pinkysheetfull_49
+  - first:
+      213: -332951779694812282
+    second: pinkysheetfull_50
+  - first:
+      213: -8370402124667685890
+    second: pinkysheetfull_51
+  - first:
+      213: 2775232428824128593
+    second: pinkysheetfull_52
+  - first:
+      213: -9035011795473146142
+    second: pinkysheetfull_53
+  - first:
+      213: 2523273564945503459
+    second: pinkysheetfull_54
+  - first:
+      213: 3882145272530181844
+    second: pinkysheetfull_55
+  - first:
+      213: 8485687186080782867
+    second: pinkysheetfull_56
+  - first:
+      213: 7738206008365722956
+    second: pinkysheetfull_57
+  - first:
+      213: 5822554947191757092
+    second: pinkysheetfull_58
+  - first:
+      213: -4862864955010183232
+    second: pinkysheetfull_59
+  - first:
+      213: 2415920469477358717
+    second: pinkysheetfull_60
+  - first:
+      213: -7387742028715065994
+    second: pinkysheetfull_61
+  - first:
+      213: -7314821606687262528
+    second: pinkysheetfull_62
+  - first:
+      213: 5343704263381995265
+    second: pinkysheetfull_63
+  - first:
+      213: 2480690736229078766
+    second: PinkyDeath1
+  - first:
+      213: 832912946951754584
+    second: PinkyDeath2
+  - first:
+      213: -8732376832435285172
+    second: PinkyDeath3
+  - first:
+      213: 4014941159987434996
+    second: PinkyDeath4
+  - first:
+      213: -4873500807856115864
+    second: PinkyDeath5
+  - first:
+      213: 3493129660301309333
+    second: PinkyDeath6
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 64
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PinkyWalkDown1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 726
+        width: 40
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f02e6d805bd06bd80800000000000000
+      internalID: -8235379797411831281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 727
+        width: 59
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 898bf6413e1016280800000000000000
+      internalID: -9051951701225916264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkLeft1
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 729
+        width: 60
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbbaf97b3d69cf230800000000000000
+      internalID: 3673977232090442683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_3
+      rect:
+        serializedVersion: 2
+        x: 335
+        y: 729
+        width: 56
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4e84af5e3541190800000000000000
+      internalID: -7992671191464090428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkUp1
+      rect:
+        serializedVersion: 2
+        x: 435
+        y: 728
+        width: 35
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00d6a2823d6ac1690800000000000000
+      internalID: -7630040242830283520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_5
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 727
+        width: 56
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb8cd96ca552a3520800000000000000
+      internalID: 2682497599862065339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkRight1
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 727
+        width: 60
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41264691d58245c0800000000000000
+      internalID: -4232673564559007409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_7
+      rect:
+        serializedVersion: 2
+        x: 717
+        y: 725
+        width: 59
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cb46a8455cdff2b0800000000000000
+      internalID: -5548473957047972926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkDown2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 635
+        width: 43
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 072254da306b28970800000000000000
+      internalID: 8755760752469811824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_9
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 634
+        width: 50
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ef42a8205aae53e0800000000000000
+      internalID: -2063024318033276952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkLeft2
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 637
+        width: 58
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ace83f8a71eecb0800000000000000
+      internalID: -4832899335713797605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_11
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 640
+        width: 53
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11e238b9df4db4690800000000000000
+      internalID: -7616760159066182127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkUp2
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 640
+        width: 39
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43b20802cdca49d50800000000000000
+      internalID: 6743204603518528308
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_13
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 638
+        width: 53
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6c410e4a6db5860800000000000000
+      internalID: 7519840006447613650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkRight2
+      rect:
+        serializedVersion: 2
+        x: 621
+        y: 635
+        width: 58
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 035d878b2ef18bb50800000000000000
+      internalID: 6609067511784199472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_15
+      rect:
+        serializedVersion: 2
+        x: 723
+        y: 632
+        width: 50
+        height: 59
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4629e6e8e1b8ba80800000000000000
+      internalID: -8450809086896167346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkDown3
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 546
+        width: 40
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57eda36a9de998870800000000000000
+      internalID: 8685648013994679925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_17
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 549
+        width: 58
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6d0770a91a77aa0800000000000000
+      internalID: -6163279882111363354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkLeft3
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 548
+        width: 60
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b0db9458c8eb0770800000000000000
+      internalID: 8578205862367842488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_19
+      rect:
+        serializedVersion: 2
+        x: 334
+        y: 548
+        width: 50
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87c78242b56b0a620800000000000000
+      internalID: 2783425072279878776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkUp3
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 547
+        width: 35
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e6acd7c0fbd4f5d0800000000000000
+      internalID: -3029554822121740570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_21
+      rect:
+        serializedVersion: 2
+        x: 520
+        y: 546
+        width: 50
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6340519252483bd00800000000000000
+      internalID: 987278038462170166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkRight3
+      rect:
+        serializedVersion: 2
+        x: 614
+        y: 546
+        width: 60
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1cc0e9ade12a6090800000000000000
+      internalID: -8040576880075551714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_23
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 547
+        width: 58
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07cf35a1d3de5f960800000000000000
+      internalID: 7635269589967043696
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkDown4
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 455
+        width: 43
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 256fb92f9bb3e9790800000000000000
+      internalID: -7521508657836853678
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_25
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 457
+        width: 55
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f7ebc81a28136c0800000000000000
+      internalID: -4165404549978357997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkLeft4
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 457
+        width: 59
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc2d6c7358131f3c0800000000000000
+      internalID: -4327623318690147636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_27
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 459
+        width: 46
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f229e3d445432b30800000000000000
+      internalID: 4261325834337985272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkUp4
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 460
+        width: 39
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a7c0d8a811f34bc0800000000000000
+      internalID: -3799928572356802649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_29
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 457
+        width: 46
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96b2fc513b5597b0800000000000000
+      internalID: -5218164325667916133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyWalkRight4
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 455
+        width: 59
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93aeeda1f55b33a50800000000000000
+      internalID: 6499738107303094841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_31
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 455
+        width: 55
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1ed732c2e3a1980800000000000000
+      internalID: -8567466981824011831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyAttackDown1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 367
+        width: 44
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0418b5fd95c151c70800000000000000
+      internalID: 8941083807538970944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_33
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 367
+        width: 48
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7be091186988f6890800000000000000
+      internalID: -7462595877537247561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_34
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 371
+        width: 60
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14fe7b8eb78e92da0800000000000000
+      internalID: -5968984212219891903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_35
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 372
+        width: 54
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2351192bdea502a30800000000000000
+      internalID: 4188447630404162866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_36
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 371
+        width: 42
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b6ba4cf31011a030800000000000000
+      internalID: 3504099663094134451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_37
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 372
+        width: 49
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0be52d13aa32ce00800000000000000
+      internalID: 1063476934255962893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_38
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 372
+        width: 58
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b5c94907080788b0800000000000000
+      internalID: -5150138822561249863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_39
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 368
+        width: 53
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce548b4f0e2d480d0800000000000000
+      internalID: -3421377953274509844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyAttackDown2
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 279
+        width: 44
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16ac6439463e290e0800000000000000
+      internalID: -2264497641506813343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_41
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 279
+        width: 50
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a8917c21e28ed110800000000000000
+      internalID: 1287610447099435173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_42
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 283
+        width: 67
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e0cc2e5f7681b6e0800000000000000
+      internalID: -1823528492509380378
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_43
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 283
+        width: 57
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70758175b878f13e0800000000000000
+      internalID: -2080795470290462969
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_44
+      rect:
+        serializedVersion: 2
+        x: 438
+        y: 282
+        width: 42
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927154428c6187080800000000000000
+      internalID: -9189569990791719127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_45
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 284
+        width: 52
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8bd82e379e4fdebf0800000000000000
+      internalID: -293309117200429640
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_46
+      rect:
+        serializedVersion: 2
+        x: 620
+        y: 283
+        width: 63
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c0c692d9062dd740800000000000000
+      internalID: 5178336970175594694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_47
+      rect:
+        serializedVersion: 2
+        x: 727
+        y: 280
+        width: 55
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e25c5c9fe5d0c8160800000000000000
+      internalID: 7029007819987076398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_48
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 191
+        width: 44
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5dc5617c81b12c80800000000000000
+      internalID: -8349197017412154018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_49
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 188
+        width: 52
+        height: 58
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5e71e3d51682d6d0800000000000000
+      internalID: -2967161776176529828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_50
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 193
+        width: 70
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 683e4f3de1e116bf0800000000000000
+      internalID: -332951779694812282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_51
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 194
+        width: 57
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef3f10cad9b56db80800000000000000
+      internalID: -8370402124667685890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_52
+      rect:
+        serializedVersion: 2
+        x: 443
+        y: 192
+        width: 42
+        height: 54
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ce431b03b938620800000000000000
+      internalID: 2775232428824128593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_53
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 196
+        width: 54
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2eedb5d34a03d9280800000000000000
+      internalID: -9035011795473146142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_54
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 194
+        width: 66
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e4d5bd30f7740320800000000000000
+      internalID: 2523273564945503459
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_55
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 191
+        width: 57
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4de9f9f8e8620e530800000000000000
+      internalID: 3882145272530181844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_56
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 100
+        width: 39
+        height: 55
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31add61698733c570800000000000000
+      internalID: 8485687186080782867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_57
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 102
+        width: 50
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4dae67ad51a36b60800000000000000
+      internalID: 7738206008365722956
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_58
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 104
+        width: 59
+        height: 51
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 429de8010eeddc050800000000000000
+      internalID: 5822554947191757092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_59
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 106
+        width: 52
+        height: 49
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cf0ce58612a38cb0800000000000000
+      internalID: -4862864955010183232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_60
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 107
+        width: 35
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7cfaccedd2178120800000000000000
+      internalID: 2415920469477358717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_61
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 107
+        width: 44
+        height: 48
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67df63e44c7797990800000000000000
+      internalID: -7387742028715065994
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_62
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 105
+        width: 57
+        height: 50
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c8bd0a11888c7a90800000000000000
+      internalID: -7314821606687262528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pinkysheetfull_63
+      rect:
+        serializedVersion: 2
+        x: 688
+        y: 103
+        width: 54
+        height: 52
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10fcf9327b6a82a40800000000000000
+      internalID: 5343704263381995265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyDeath1
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 11
+        width: 54
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee65982d41f2d6220800000000000000
+      internalID: 2480690736229078766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyDeath2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 11
+        width: 60
+        height: 56
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85312eb89e91f8b00800000000000000
+      internalID: 832912946951754584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyDeath3
+      rect:
+        serializedVersion: 2
+        x: 246
+        y: 14
+        width: 52
+        height: 53
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4318d9798d50d680800000000000000
+      internalID: -8732376832435285172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyDeath4
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 10
+        width: 62
+        height: 57
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f5552386bfe7b730800000000000000
+      internalID: 4014941159987434996
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyDeath5
+      rect:
+        serializedVersion: 2
+        x: 448
+        y: 21
+        width: 64
+        height: 46
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 86f282f06d8dd5cb0800000000000000
+      internalID: -4873500807856115864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PinkyDeath6
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 35
+        width: 64
+        height: 32
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 595f3ac2be61a7030800000000000000
+      internalID: 3493129660301309333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
