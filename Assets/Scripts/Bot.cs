@@ -16,7 +16,8 @@ public class Bot : MonoBehaviour, IDamageable
     private static readonly int
         LookX = Animator.StringToHash("Look X"),
         LookY = Animator.StringToHash("Look Y"),
-        IsDefeated = Animator.StringToHash("Defeated");
+        IsDefeated = Animator.StringToHash("Defeated"),
+        IsDead = Animator.StringToHash("Dead");
 
 
     private void Start()
@@ -63,5 +64,10 @@ public class Bot : MonoBehaviour, IDamageable
         isFixed = true;
         anim.SetBool(IsDefeated, true);
         smoke.Stop();
+    }
+
+    public void OnDefeatedAnimationIsOver()
+    {
+        anim.SetBool(IsDead, true);
     }
 }
