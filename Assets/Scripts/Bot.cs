@@ -1,7 +1,9 @@
+using System;
 using UnityEngine;
 
 public class Bot : MonoBehaviour, IDamageable
 {
+    [SerializeField] private AnimationController animations; 
     [SerializeField] private Transform startPoint, endPoint;
     [SerializeField] private float speed = 3f;
     [SerializeField] private int damageAmount = 1, maxHealth = 1;
@@ -10,9 +12,7 @@ public class Bot : MonoBehaviour, IDamageable
     private Rigidbody2D rigidbody2d;
     private Animator anim;
     private int health;
-    //private static readonly int LookX = Animator.StringToHash("x");
-    //private static readonly int LookY = Animator.StringToHash("y");
-    //private static readonly int IsDefeated = Animator.StringToHash("isFixed");
+    private Theme theme = Theme.Happy;
     private static readonly int
         LookX = Animator.StringToHash("Look X"),
         LookY = Animator.StringToHash("Look Y"),
@@ -25,7 +25,17 @@ public class Bot : MonoBehaviour, IDamageable
         rigidbody2d = GetComponent<Rigidbody2D>();
         rigidbody2d.position = startPoint.position;
         anim = GetComponent<Animator>();
+        theme = GameManager.Instance.theme;
+        anim.runtimeAnimatorController = animations.Animators[(int)theme];
+        Events.OnThemeChange += HandleThemeChange;
+        
         health = maxHealth;
+    }
+
+    private void HandleThemeChange(Theme newTheme)
+    {
+        theme = newTheme;
+        anim.runtimeAnimatorController = animations.Animators[(int) theme];
     }
 
     private void FixedUpdate()
@@ -69,5 +79,10 @@ public class Bot : MonoBehaviour, IDamageable
     public void OnDefeatedAnimationIsOver()
     {
         anim.SetBool(IsDead, true);
+    }
+
+    private void OnDestroy()
+    {
+        Events.OnThemeChange -= HandleThemeChange;
     }
 }

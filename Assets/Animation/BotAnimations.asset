@@ -15,4 +15,6 @@ MonoBehaviour:
   animators:
   - {fileID: 9100000, guid: 17cfce6d33fe723428c48b725cd05af0, type: 2}
   - {fileID: 9100000, guid: 978755d5abd4f1449ad4cf9e9a24bb2a, type: 2}
-  sprites: []
+  sprites:
+  - {fileID: 3862826375368706477, guid: ca7592785096965499be1d6d3bd6f9c6, type: 3}
+  - {fileID: 8941083807538970944, guid: 96a6c5fd96f28364a97c70f9fcabbede, type: 3}

@@ -6073,6 +6073,12 @@ PrefabInstance:
       propertyPath: m_Interpolate
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7119800361376952606, guid: 6f012b5f68300084e868866ea112b74d,
+        type: 3}
+      propertyPath: animations
+      value: 
+      objectReference: {fileID: 11400000, guid: 3cd54488c4722be44aa03bf31c489c1d,
+        type: 2}
     - target: {fileID: 7119800361376952607, guid: 6f012b5f68300084e868866ea112b74d,
         type: 3}
       propertyPath: m_Size.y
