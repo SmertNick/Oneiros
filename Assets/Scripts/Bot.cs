@@ -8,10 +8,12 @@ public class Bot : MonoBehaviour, IDamageable
     [SerializeField] private float speed = 3f;
     [SerializeField] private int damageAmount = 1, maxHealth = 1;
     [SerializeField] private ParticleSystem smoke;
-    private bool isFixed = false;
+    private bool isDefeated = false;
+    private bool isDead = false;
     private Rigidbody2D rigidbody2d;
     private Animator anim;
     private int health;
+    private Vector2 direction;
     private Theme theme = Theme.Happy;
     private static readonly int
         LookX = Animator.StringToHash("Look X"),
@@ -36,11 +38,15 @@ public class Bot : MonoBehaviour, IDamageable
     {
         theme = newTheme;
         anim.runtimeAnimatorController = animations.Animators[(int) theme];
+        anim.SetFloat(LookX, direction.x);
+        anim.SetFloat(LookY, direction.y);
+        anim.SetBool(IsDefeated, isDefeated);
+        anim.SetBool(IsDead, isDead);
     }
 
     private void FixedUpdate()
     {
-        if (isFixed) return;
+        if (isDefeated) return;
         Move();
     }
 
@@ -54,7 +60,7 @@ public class Bot : MonoBehaviour, IDamageable
         var endPosition = endPoint.position;
         rigidbody2d.position = Vector2.Lerp(startPosition, endPosition, pos);
         //setting animation direction
-        Vector2 direction = ((endPosition - startPosition) * Mathf.Cos(timeStamp)).normalized;
+        direction = ((endPosition - startPosition) * Mathf.Cos(timeStamp)).normalized;
         //There are probably repeating calculations within lerp and direction. Might be possible to optimize
         anim.SetFloat(LookX, direction.x);
         anim.SetFloat(LookY, direction.y);
@@ -71,7 +77,7 @@ public class Bot : MonoBehaviour, IDamageable
 
     public void TakeDamage(int value)
     {
-        isFixed = true;
+        isDefeated = true;
         anim.SetBool(IsDefeated, true);
         smoke.Stop();
     }
@@ -79,6 +85,7 @@ public class Bot : MonoBehaviour, IDamageable
     public void OnDefeatedAnimationIsOver()
     {
         anim.SetBool(IsDead, true);
+        isDead = true;
     }
 
     private void OnDestroy()

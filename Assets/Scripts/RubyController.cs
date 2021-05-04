@@ -19,7 +19,7 @@ public class RubyController : MonoBehaviour
         LookY = Animator.StringToHash("Look Y"),
         Attack = Animator.StringToHash("Attack");
     private readonly List<GameObject> bullets = new List<GameObject>();
-    private Vector2 move, lookDirection = new Vector2(0f, -1f);
+    private Vector2 move, direction = new Vector2(0f, -1f);
     [SerializeField] private Transform bulletSpawnPosition;
 
     private void Start()
@@ -34,9 +34,12 @@ public class RubyController : MonoBehaviour
         Events.OnThemeChange += HandleThemeChange;
     }
 
-    private void HandleThemeChange(Theme newtheme)
+    private void HandleThemeChange(Theme newTheme)
     {
-        anim.runtimeAnimatorController = animations.Animators[(int) newtheme];
+        anim.runtimeAnimatorController = animations.Animators[(int) newTheme];
+        anim.SetFloat(LookX, direction.x);
+        anim.SetFloat(LookY, direction.y);
+        anim.SetFloat(Speed, move.magnitude);
     }
 
     private void GenerateBullets(int amountOfBullets)
@@ -69,7 +72,7 @@ public class RubyController : MonoBehaviour
             if (bullet.activeInHierarchy) continue;
             bullet.transform.position = bulletSpawnPosition.position;
             bullet.transform.rotation = Quaternion.identity;
-            bullet.transform.Rotate(Vector3.forward, Vector2.SignedAngle(Vector2.right, lookDirection));
+            bullet.transform.Rotate(Vector3.forward, Vector2.SignedAngle(Vector2.right, direction));
             bullet.SetActive(true);
             anim.SetTrigger(Attack);
             aud.Stop();
@@ -87,9 +90,9 @@ public class RubyController : MonoBehaviour
         body.velocity = move * stats.Speed;
 
         if (Mathf.Approximately((move.magnitude), 0f)) return;
-        lookDirection = move;
-        anim.SetFloat(LookX, lookDirection.x);
-        anim.SetFloat(LookY, lookDirection.y);
+        direction = move;
+        anim.SetFloat(LookX, direction.x);
+        anim.SetFloat(LookY, direction.y);
     }
 
     private IEnumerator Invincibility()
