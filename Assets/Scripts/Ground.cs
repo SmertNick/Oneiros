@@ -1,18 +1,16 @@
-﻿using TMPro;
+﻿using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
 public class Ground : MonoBehaviour
 {
     [SerializeField] private GroundController ground;
-    [SerializeField] private Tilemap tmap;
-    private Theme theme = Theme.Happy;
-    private Tilemap tmap2;
+    [SerializeField] private GameObject tileMap;
+    private readonly List<GameObject> maps = new List<GameObject>();
     
 
     private void Start()
     {
-        theme = GameManager.Instance.theme;
         Events.OnThemeChange += HandleThemeChange;
         SetUpTileMaps();
     }
@@ -20,32 +18,30 @@ public class Ground : MonoBehaviour
 
     private void SetUpTileMaps()
     {
-        var groundObj = tmap.gameObject;
-        tmap2 = Instantiate(groundObj, transform.position, Quaternion.identity, groundObj.transform.parent).GetComponent<Tilemap>();
-        tmap2.gameObject.SetActive(false);
-        for (int i = 0; i < ground.Sets[0].Tiles.Length; i++)
+        foreach (var set in ground.Sets)
         {
-            var tileFrom = ground.Sets[0].Tiles[i];
-            var tileTo = ground.Sets[1].Tiles[i];
-            if (tileTo != tileFrom)
-                tmap2.SwapTile(tileFrom, tileTo);
+            var obj = Instantiate(tileMap, transform.position, Quaternion.identity,
+                tileMap.transform.parent);
+            maps.Add(obj);
+            var tmap = obj.GetComponent<Tilemap>();
+            obj.SetActive(false);
+            for (int i = 0; i < set.Tiles.Length; i++)
+            {
+                var tileFrom = ground.Sets[0].Tiles[i];
+                var tileTo = set.Tiles[i];
+                if (tileTo != tileFrom)
+                    tmap.SwapTile(tileFrom, tileTo);
+            }
         }
+        tileMap.SetActive(false);
+        maps[(int)GameManager.Instance.theme].SetActive(true);
     }
+    
 
     private void HandleThemeChange(Theme newTheme)
     {
-        //говнокод. Заменить нах
-        if (newTheme == Theme.Brutal)
-        {
-            tmap.gameObject.SetActive(false);
-            tmap2.gameObject.SetActive(true);
-        }
-        else
-        {
-            tmap2.gameObject.SetActive(false);
-            tmap.gameObject.SetActive(true);
-        }
-        theme = newTheme;
+        for (int i = 0; i < maps.Count; i++)
+            maps[i].SetActive(i == (int) newTheme);
     }
     
     private void OnDestroy()
