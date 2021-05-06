@@ -34,6 +34,7 @@ public class Ground : MonoBehaviour
 
     private void HandleThemeChange(Theme newTheme)
     {
+        //говнокод. Заменить нах
         if (newTheme == Theme.Brutal)
         {
             tmap.gameObject.SetActive(false);
