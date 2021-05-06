@@ -10,6 +10,7 @@ public class Bot : MonoBehaviour, IDamageable
     [SerializeField] private ParticleSystem smoke;
     private bool isDefeated = false;
     private bool isDead = false;
+    private Collider2D coll; 
     private Rigidbody2D rigidbody2d;
     private Animator anim;
     private int health;
@@ -26,6 +27,7 @@ public class Bot : MonoBehaviour, IDamageable
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         rigidbody2d.position = startPoint.position;
+        coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         theme = GameManager.Instance.theme;
         anim.runtimeAnimatorController = animations.Animators[(int)theme];
@@ -80,6 +82,7 @@ public class Bot : MonoBehaviour, IDamageable
         isDefeated = true;
         anim.SetBool(IsDefeated, true);
         smoke.Stop();
+        coll.isTrigger = true;
     }
 
     public void OnDefeatedAnimationIsOver()

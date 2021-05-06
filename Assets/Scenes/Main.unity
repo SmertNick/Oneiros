@@ -640,7 +640,7 @@ GameObject:
   - component: {fileID: 777625467}
   - component: {fileID: 777625466}
   - component: {fileID: 777625468}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -793,7 +793,7 @@ GameObject:
   - component: {fileID: 1962760486}
   - component: {fileID: 1962760488}
   - component: {fileID: 1962760487}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Tilemap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6082,6 +6082,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.y
       value: 0.6580189
+      objectReference: {fileID: 0}
+    - target: {fileID: 7119800361376952607, guid: 6f012b5f68300084e868866ea112b74d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7119800361376952607, guid: 6f012b5f68300084e868866ea112b74d,
         type: 3}
