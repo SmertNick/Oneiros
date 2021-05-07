@@ -13,6 +13,7 @@ public class SpriteSwapper : MonoBehaviour
 
     private void HandleThemeChange(Theme newTheme)
     {
+        if ((int) newTheme >= sprites.Set.Length) return;
         sRenderer.sprite = sprites.Set[(int) newTheme];
     }
 
