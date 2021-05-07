@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -132,5 +133,11 @@ public class RubyController : MonoBehaviour
         }
         health = Mathf.Clamp(health + amount, 0, stats.MaxHealth);
         Debug.Log($"{health}/{stats.MaxHealth}");
+    }
+
+    private void OnDestroy()
+    {
+        Events.OnThemeChange -= HandleThemeChange;
+        Events.OnFXVolumeChange -= HandleVolumeChange;
     }
 }
