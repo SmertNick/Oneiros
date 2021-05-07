@@ -6,7 +6,7 @@ public class HealthCollectible : MonoBehaviour
     [SerializeField] private int healingAmount = 1;
     private AudioSource aud;
 
-    private void Start()
+    private void Awake()
     {
         aud = GetComponent<AudioSource>();
     }
@@ -17,7 +17,7 @@ public class HealthCollectible : MonoBehaviour
         if (player == null) return;
         if (player.IsAtFullHealth) return;
         player.ChangeHealth(healingAmount);
-        aud.Play();
+        AudioSource.PlayClipAtPoint(aud.clip, AudioManager.Instance.transform.position, AudioManager.Instance.FXVolume);
         Destroy(gameObject);
     }
 }

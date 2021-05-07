@@ -10,6 +10,7 @@ public class SoundSwapper : MonoBehaviour
     {
         aud = GetComponent<AudioSource>();
         aud.volume = AudioManager.Instance.FXVolume;
+        aud.clip = sounds.Set[(int) GameManager.Instance.theme];
         Events.OnFXVolumeChange += HandleVolumeChange;
         Events.OnThemeChange += HandleThemeChange;
     }
