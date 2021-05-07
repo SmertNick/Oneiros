@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da46a235eb50cc945911357001fc52f2, type: 3}
   m_Name: Player Happy Set
   m_EditorClassIdentifier: 
-  walk: {fileID: 0}
-  attack: {fileID: 0}
-  hit: {fileID: 0}
+  walk: {fileID: 8300000, guid: a20c77ecd5de9eb4a98731b45ad84c3e, type: 3}
+  attack: {fileID: 8300000, guid: b2edfd40873655249ba0e01a5cf705be, type: 3}
+  hit: {fileID: 8300000, guid: 9b1bb1f450b7d444fa4a8019d13519a7, type: 3}

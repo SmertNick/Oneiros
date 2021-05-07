@@ -9,7 +9,7 @@ public class RubyController : MonoBehaviour
     private Rigidbody2D body;
     private Animator anim;
     private int health, bulletsRemaining;
-    private bool isInvincible;
+    private bool isInvincible = false, justFired = false;
     private AudioSource aud;
     public bool IsAtFullHealth => (health >= stats.MaxHealth);
 
@@ -17,6 +17,7 @@ public class RubyController : MonoBehaviour
         Speed = Animator.StringToHash("Speed"),
         LookX = Animator.StringToHash("Look X"),
         LookY = Animator.StringToHash("Look Y"),
+        Hit = Animator.StringToHash("Hit"),
         Attack = Animator.StringToHash("Attack");
     private readonly List<GameObject> bullets = new List<GameObject>();
     private Vector2 move, direction = new Vector2(0f, -1f);
@@ -29,7 +30,6 @@ public class RubyController : MonoBehaviour
         aud = GetComponent<AudioSource>();
         aud.volume = AudioManager.Instance.FXVolume;
         health = stats.MaxHealth;
-        isInvincible = false;
         bulletsRemaining = stats.MaxBullets;
         GenerateBullets(20);
         Events.OnThemeChange += HandleThemeChange;
@@ -74,6 +74,8 @@ public class RubyController : MonoBehaviour
     private void FireBullet()
     {
         if (bulletsRemaining <= 0) return;
+        if (justFired) return;
+        StartCoroutine(FireCooldown());
         foreach (var bullet in bullets)
         {
             if (bullet.activeInHierarchy) continue;
@@ -88,6 +90,13 @@ public class RubyController : MonoBehaviour
             bulletsRemaining--;
             return;
         }
+    }
+
+    private IEnumerator FireCooldown()
+    {
+        justFired = true;
+        yield return new WaitForSeconds(stats.FireCooldownTime);
+        justFired = false;
     }
 
 
@@ -115,6 +124,7 @@ public class RubyController : MonoBehaviour
         {
             if (isInvincible) return;
             StartCoroutine(Invincibility());
+            anim.SetTrigger(Hit);
         }
         health = Mathf.Clamp(health + amount, 0, stats.MaxHealth);
         Debug.Log($"{health}/{stats.MaxHealth}");
