@@ -27,6 +27,11 @@ public class GameManager : Singleton<GameManager>
         {
             ChangeTheme();
         }
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            TogglePause();
+        }
     }
 
     #region ThemeControl
