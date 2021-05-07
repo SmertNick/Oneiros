@@ -8,7 +8,7 @@ public class RubyController : MonoBehaviour
     [SerializeField] private AnimationController animations;
     private Rigidbody2D body;
     private Animator anim;
-    private int health, bulletsRemainig;
+    private int health, bulletsRemaining;
     private bool isInvincible;
     private AudioSource aud;
     public bool IsAtFullHealth => (health >= stats.MaxHealth);
@@ -27,11 +27,18 @@ public class RubyController : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         aud = GetComponent<AudioSource>();
+        aud.volume = AudioManager.Instance.FXVolume;
         health = stats.MaxHealth;
         isInvincible = false;
-        bulletsRemainig = stats.MaxBullets;
+        bulletsRemaining = stats.MaxBullets;
         GenerateBullets(20);
         Events.OnThemeChange += HandleThemeChange;
+        Events.OnFXVolumeChange += HandleVolumeChange;
+    }
+
+    private void HandleVolumeChange(float sliderValue)
+    {
+        aud.volume = sliderValue;
     }
 
     private void HandleThemeChange(Theme newTheme)
@@ -66,7 +73,7 @@ public class RubyController : MonoBehaviour
 
     private void FireBullet()
     {
-        if (bulletsRemainig <= 0) return;
+        if (bulletsRemaining <= 0) return;
         foreach (var bullet in bullets)
         {
             if (bullet.activeInHierarchy) continue;
@@ -78,7 +85,7 @@ public class RubyController : MonoBehaviour
             aud.Stop();
             aud.clip = stats.ThrowCogSound;
             aud.Play();
-            bulletsRemainig--;
+            bulletsRemaining--;
             return;
         }
     }
