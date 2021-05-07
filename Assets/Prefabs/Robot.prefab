@@ -178,6 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca9237ad6ffdcad42afe9a5dd2d7a9a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animations: {fileID: 11400000, guid: 3cd54488c4722be44aa03bf31c489c1d, type: 2}
   startPoint: {fileID: 7119800360101745830}
   endPoint: {fileID: 7119800361872189871}
   speed: 1.5
@@ -249,6 +250,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 3944575097904593721, guid: ce727233ab4257447adc65e420cd3a5a,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5558812795674861770, guid: ce727233ab4257447adc65e420cd3a5a,
         type: 3}
