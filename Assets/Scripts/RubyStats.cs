@@ -8,12 +8,10 @@ public class RubyStats : ScriptableObject
     [SerializeField] private float invincibilityTime = 3f;
     [SerializeField] private float fireCooldownTime = 1f;
     [SerializeField] private Vector2 speed;
-    [SerializeField] private AudioClip throwCogSound;
     public GameObject bullet;
     public float InvincibilityTime => invincibilityTime;
     public float FireCooldownTime => fireCooldownTime;
     public Vector2 Speed => speed;
     public int MaxHealth => maxHealth;
     public int MaxBullets => maxBullets;
-    public AudioClip ThrowCogSound => throwCogSound;
 }

@@ -6,6 +6,7 @@ public class RubyController : MonoBehaviour
 {
     [SerializeField] private RubyStats stats;
     [SerializeField] private AnimationController animations;
+    [SerializeField] private CharacterSoundController sounds;
     private Rigidbody2D body;
     private Animator anim;
     private int health, bulletsRemaining;
@@ -85,7 +86,7 @@ public class RubyController : MonoBehaviour
             bullet.SetActive(true);
             anim.SetTrigger(Attack);
             aud.Stop();
-            aud.clip = stats.ThrowCogSound;
+            aud.clip = sounds.Sets[(int) GameManager.Instance.theme].Attack;
             aud.Play();
             bulletsRemaining--;
             return;
@@ -125,6 +126,9 @@ public class RubyController : MonoBehaviour
             if (isInvincible) return;
             StartCoroutine(Invincibility());
             anim.SetTrigger(Hit);
+            aud.Stop();
+            aud.clip = sounds.Sets[(int) GameManager.Instance.theme].Hit;
+            aud.Play();
         }
         health = Mathf.Clamp(health + amount, 0, stats.MaxHealth);
         Debug.Log($"{health}/{stats.MaxHealth}");
