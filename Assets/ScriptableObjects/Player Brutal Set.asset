@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Player Brutal Set
   m_EditorClassIdentifier: 
   walk: {fileID: 0}
-  attack: {fileID: 0}
-  hit: {fileID: 0}
+  attack: {fileID: 8300000, guid: a3ca78e83b12bec4c850ceaf92795528, type: 3}
+  hit: {fileID: 8300000, guid: 2b27c7c486155044eab1121be17e9f32, type: 3}
