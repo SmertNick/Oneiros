@@ -86,9 +86,7 @@ public class RubyController : MonoBehaviour
             bullet.transform.Rotate(Vector3.forward, Vector2.SignedAngle(Vector2.right, direction));
             bullet.SetActive(true);
             anim.SetTrigger(Attack);
-            aud.Stop();
-            aud.clip = sounds.Sets[(int) GameManager.Instance.theme].Attack;
-            aud.Play();
+            aud.PlayOneShot(sounds.Sets[(int) GameManager.Instance.theme].Attack, AudioManager.Instance.FXVolume);
             bulletsRemaining--;
             return;
         }
@@ -127,9 +125,7 @@ public class RubyController : MonoBehaviour
             if (isInvincible) return;
             StartCoroutine(Invincibility());
             anim.SetTrigger(Hit);
-            aud.Stop();
-            aud.clip = sounds.Sets[(int) GameManager.Instance.theme].Hit;
-            aud.Play();
+            aud.PlayOneShot(sounds.Sets[(int) GameManager.Instance.theme].Hit);
         }
         health = Mathf.Clamp(health + amount, 0, stats.MaxHealth);
         Debug.Log($"{health}/{stats.MaxHealth}");
