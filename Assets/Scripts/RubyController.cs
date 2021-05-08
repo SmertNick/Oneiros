@@ -61,7 +61,7 @@ public class RubyController : MonoBehaviour
     {
         for (int i = 0; i < amountOfBullets; i++)
         {
-            GameObject projectile = Instantiate(stats.bullet);
+            GameObject projectile = Instantiate(stats.bullet, gameObject.transform);
             projectile.SetActive(false);
             bullets.Add(projectile);
         }
