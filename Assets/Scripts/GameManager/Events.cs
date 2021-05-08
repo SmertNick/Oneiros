@@ -24,7 +24,8 @@ public static class Events
     public static void ChangeGameState(GameState newState, GameState previousState)
     {
         OnGameStateChange?.Invoke(newState, previousState);
-        Debug.Log("State switched from " + previousState + " to " + newState);
+        if (Debug.isDebugBuild)
+            Debug.Log("State switched from " + previousState + " to " + newState);
     }
     #endregion
     
@@ -35,7 +36,8 @@ public static class Events
     public static void ChangeTheme(Theme newTheme)
     {
         OnThemeChange?.Invoke(newTheme);
-        Debug.Log("Theme switched to " + newTheme);
+        if (Debug.isDebugBuild)
+            Debug.Log("Theme switched to " + newTheme);
     }
     #endregion
 }

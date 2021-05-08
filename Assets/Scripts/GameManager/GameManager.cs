@@ -60,7 +60,8 @@ public class GameManager : Singleton<GameManager>
         AsyncOperation ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive);
         if (ao == null)
         {
-            Debug.LogError("[GameManager] Unable to load level " + levelName);
+            if (Debug.isDebugBuild)
+                Debug.LogError("[GameManager] Unable to load level " + levelName);
             return;
         }
         ao.completed += OnLoadOperationComplete;
@@ -81,7 +82,8 @@ public class GameManager : Singleton<GameManager>
         Events.ChangeTheme(theme);
         TogglePause();
         //TODO End transition animation
-        Debug.Log("Load Complete");
+        if (Debug.isDebugBuild)
+            Debug.Log("Load Complete");
     }
 
     public void UnloadLevel(string levelName)
@@ -89,7 +91,8 @@ public class GameManager : Singleton<GameManager>
         AsyncOperation ao = SceneManager.UnloadSceneAsync(levelName);
         if (ao == null)
         {
-            Debug.LogError("[GameManager] Unable to unload level " + levelName);
+            if (Debug.isDebugBuild)
+                Debug.LogError("[GameManager] Unable to unload level " + levelName);
             return;
         }
         ao.completed += OnUnloadOperationComplete;
@@ -99,7 +102,8 @@ public class GameManager : Singleton<GameManager>
     private void OnUnloadOperationComplete(AsyncOperation ao)
     {
         ao.completed -= OnUnloadOperationComplete;
-        Debug.Log("Unload Complete");
+        if (Debug.isDebugBuild)
+            Debug.Log("Unload Complete");
     }
     #endregion
 
