@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 65b81766321db194d8bbc5e6f634c26b, type: 3}
-  m_Name: CollectibleHealthSounds
+  m_Name: RobotHit
   m_EditorClassIdentifier: 
   set:
-  - {fileID: 8300000, guid: af5f8b64e3f58f24c87ff8f789b04f6c, type: 3}
-  - {fileID: 8300000, guid: c4af198b2f2573d45b713da8347f3545, type: 3}
+  - {fileID: 8300000, guid: ae904c7305df7344d86b2092c0cb3a26, type: 3}
+  - {fileID: 8300000, guid: 06e1ded92c150cd428d48a1ee4015ff6, type: 3}
