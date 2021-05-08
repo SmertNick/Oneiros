@@ -30,7 +30,7 @@ public class RubyController : MonoBehaviour
     [SerializeField] private Transform bulletSpawnPosition;
 
     
-    private void Start()
+    private void Awake()
     {
         body = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();

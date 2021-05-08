@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Restart()
     {
-        throw new NotImplementedException();
+        GameManager.Instance.RestartGame();
     }
 
     private void Quit()

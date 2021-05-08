@@ -78,7 +78,7 @@ public class GameManager : Singleton<GameManager>
             loadOperations.Remove(ao);
             ao.completed -= OnLoadOperationComplete;
         }
-        Events.ChangeGameState(GameState.Running, GameState.Pregame);
+        Events.ChangeTheme(theme);
         TogglePause();
         //TODO End transition animation
         Debug.Log("Load Complete");
@@ -93,6 +93,7 @@ public class GameManager : Singleton<GameManager>
             return;
         }
         ao.completed += OnUnloadOperationComplete;
+        UpdateState(GameState.Pregame);
     }
 
     private void OnUnloadOperationComplete(AsyncOperation ao)
@@ -154,7 +155,9 @@ public class GameManager : Singleton<GameManager>
 
     public void RestartGame()
     {
-        throw new NotImplementedException();
+        string levelName = currentLevelName;
+        UnloadLevel(levelName);
+        LoadLevel(levelName);
     }
 
     public void QuitGame()
