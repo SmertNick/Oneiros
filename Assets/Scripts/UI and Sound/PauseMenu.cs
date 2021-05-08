@@ -7,7 +7,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] private Button resumeButton, optionsButton, restartButton, quitButton;
     [SerializeField] private GameObject pauseMenu, optionsMenu;
 
-    private void Start()
+    private void Awake()
     {
         Events.OnGameStateChange += HandleStateChange;
         resumeButton.onClick.AddListener(ResumeGame);

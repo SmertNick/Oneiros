@@ -67,8 +67,8 @@ public class GameManager : Singleton<GameManager>
         loadOperations.Add(ao);
         currentLevelName = levelName;
         UpdateState(GameState.Running);
-        TogglePause();
         //TODO add transition animation, make a progress bar from ao.progress (float 0-1)
+        TogglePause();
     }
 
     private void OnLoadOperationComplete(AsyncOperation ao)
@@ -79,8 +79,8 @@ public class GameManager : Singleton<GameManager>
             ao.completed -= OnLoadOperationComplete;
         }
         Events.ChangeGameState(GameState.Running, GameState.Pregame);
-        //TODO End transition animation
         TogglePause();
+        //TODO End transition animation
         Debug.Log("Load Complete");
     }
 

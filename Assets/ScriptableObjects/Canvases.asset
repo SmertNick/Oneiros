@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenu: {fileID: 1853322481163927120, guid: 1cdbbc8872352f84d972396d4bd1f2ab,
     type: 3}
+  pauseMenu: {fileID: 1853322481163927120, guid: a0181fe09f5b0254dabbed4f926607e8,
+    type: 3}
   hUDCanvases: []
