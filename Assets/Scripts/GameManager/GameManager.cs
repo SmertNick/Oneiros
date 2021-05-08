@@ -69,6 +69,7 @@ public class GameManager : Singleton<GameManager>
         ao.completed += OnLoadOperationComplete;
         loadOperations.Add(ao);
         currentLevelName = levelName;
+        UpdateState(GameState.Running);
         //add transition animation
         //make a progress bar from ao.progress (float 0-1)
     }
