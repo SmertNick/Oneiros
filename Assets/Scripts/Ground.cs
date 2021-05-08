@@ -9,7 +9,7 @@ public class Ground : MonoBehaviour
     private readonly List<GameObject> maps = new List<GameObject>();
     
 
-    private void Start()
+    private void Awake()
     {
         Events.OnThemeChange += HandleThemeChange;
         SetUpTileMaps();
