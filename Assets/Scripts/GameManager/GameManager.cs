@@ -10,7 +10,7 @@ public class GameManager : Singleton<GameManager>
 
     private GameState CurrentGameState { get; set; } = GameState.Pregame;
     private readonly List<AsyncOperation> loadOperations = new List<AsyncOperation>();
-    private string currentLevelName = string.Empty;
+    public string currentLevelName = string.Empty;
 
     public Theme theme = Theme.Happy;
 
@@ -167,7 +167,7 @@ public class GameManager : Singleton<GameManager>
 
     public void QuitGame()
     {
-        throw new NotImplementedException();
+        Application.Quit();
     }
     #endregion
 }

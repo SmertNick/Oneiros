@@ -42,7 +42,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Quit()
     {
-        throw new NotImplementedException();
+        GameManager.Instance.UnloadLevel(GameManager.Instance.currentLevelName);
     }
 
     private void OnDestroy()

@@ -44,6 +44,12 @@ public class UIManager : Singleton<UIManager>
                 //transitionAnimation
             }
         }
+
+        if (state == GameState.Pregame)
+        {
+            mainMenu.SetActive(true);
+            pauseMenu.SetActive(false);
+        }
     }
 
     private void HandleThemeChange(Theme newTheme)
