@@ -26,12 +26,12 @@ public class ButtonHandler : MonoBehaviour
 
     public void OnHover()
     {
-        aud.PlayOneShot(soundController.Sets[(int) theme].ButtonHoverSound);
+        aud.PlayOneShot(soundController.Sets[(int) theme].ButtonHoverSound, aud.volume);
     }
 
     private void PlayClickSound()
     {
-        aud.PlayOneShot(soundController.Sets[(int) theme].ButtonClickSound);
+        aud.PlayOneShot(soundController.Sets[(int) theme].ButtonClickSound, aud.volume);
     }
 
     private void ChangeVolume(float value)
