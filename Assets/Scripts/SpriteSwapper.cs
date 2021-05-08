@@ -5,7 +5,7 @@ public class SpriteSwapper : MonoBehaviour
     [SerializeField] private SpriteSet sprites;
     private SpriteRenderer sRenderer;
     
-    private void Start()
+    private void Awake()
     {
         sRenderer = GetComponent<SpriteRenderer>();
         Events.OnThemeChange += HandleThemeChange;
