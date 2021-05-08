@@ -135,7 +135,8 @@ public class RubyController : MonoBehaviour
             aud.PlayOneShot(sounds.Sets[(int) GameManager.Instance.theme].Hit, aud.volume);
         }
         health = Mathf.Clamp(health + amount, 0, stats.MaxHealth);
-        Debug.Log($"{health}/{stats.MaxHealth}");
+        if (Debug.isDebugBuild)
+            Debug.Log($"{health}/{stats.MaxHealth}");
     }
 
     private void OnDestroy()
