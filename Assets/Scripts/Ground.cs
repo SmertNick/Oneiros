@@ -15,17 +15,17 @@ public class Ground : MonoBehaviour
         SetUpTileMaps();
     }
 
-
     private void SetUpTileMaps()
     {
         foreach (var set in ground.Sets)
         {
+            //creating tilemap copies
             var obj = Instantiate(tileMap, transform.position, Quaternion.identity,
                 tileMap.transform.parent);
             maps.Add(obj);
             var tmap = obj.GetComponent<Tilemap>();
             obj.SetActive(false);
-            for (int i = 0; i < set.Tiles.Length; i++)
+            for (int i = 0; i < set.Tiles.Length; i++) //swapping tiles with their counterparts
             {
                 var tileFrom = ground.Sets[0].Tiles[i];
                 var tileTo = set.Tiles[i];
@@ -36,7 +36,6 @@ public class Ground : MonoBehaviour
         tileMap.SetActive(false);
         maps[(int)GameManager.Instance.theme].SetActive(true);
     }
-    
 
     private void HandleThemeChange(Theme newTheme)
     {

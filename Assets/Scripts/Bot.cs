@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class Bot : MonoBehaviour, IDamageable
@@ -31,10 +30,11 @@ public class Bot : MonoBehaviour, IDamageable
         coll = GetComponent<Collider2D>();
         anim = GetComponent<Animator>();
         aud = GetComponent<AudioSource>();
+        health = maxHealth;
+
         theme = GameManager.Instance.theme;
         anim.runtimeAnimatorController = animations.Animators[(int)theme];
         Events.OnThemeChange += HandleThemeChange;
-        health = maxHealth;
     }
 
     private void HandleThemeChange(Theme newTheme)
@@ -55,6 +55,7 @@ public class Bot : MonoBehaviour, IDamageable
 
     private void Move()
     {
+        //TODO use Mathf.PingPong instead?
         var timeStamp = speed * Time.timeSinceLevelLoad;
         //Produce smoothly changing value between 0 and 1, and then back to 0, and so on.
         var pos = .5f + .5f * Mathf.Sin(timeStamp);
@@ -82,8 +83,10 @@ public class Bot : MonoBehaviour, IDamageable
     {
         isDefeated = true;
         anim.SetBool(IsDefeated, true);
-        smoke.Stop();
+        smoke.Stop(); //particles are off atm anyway
         aud.PlayOneShot(aud.clip, AudioManager.Instance.FXVolume);
+        //"turning off" collider.
+        //disabling collider2D (not 3D though) component for some reason turns off entire gameobject
         coll.isTrigger = true;
     }
 

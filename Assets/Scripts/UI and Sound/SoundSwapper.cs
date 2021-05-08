@@ -1,11 +1,11 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SoundSwapper : MonoBehaviour
 {
     [SerializeField] private SoundSet sounds;
     private AudioSource aud;
 
+    
     private void Awake()
     {
         aud = GetComponent<AudioSource>();

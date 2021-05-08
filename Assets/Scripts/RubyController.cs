@@ -1,19 +1,22 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class RubyController : MonoBehaviour
 {
     [SerializeField] private RubyStats stats;
-    [SerializeField] private AnimationController animations;
-    [SerializeField] private CharacterSoundController sounds;
-    private Rigidbody2D body;
-    private Animator anim;
     private int health, bulletsRemaining;
-    private bool isInvincible = false, justFired = false;
-    private AudioSource aud;
     public bool IsAtFullHealth => (health >= stats.MaxHealth);
+
+    [SerializeField] private AnimationController animations;
+    private Animator anim;
+
+    [SerializeField] private CharacterSoundController sounds;
+    private AudioSource aud;
+
+    private Rigidbody2D body;
+    private bool isInvincible = false, justFired = false;
 
     private static readonly int 
         Speed = Animator.StringToHash("Speed"),
@@ -21,10 +24,12 @@ public class RubyController : MonoBehaviour
         LookY = Animator.StringToHash("Look Y"),
         Hit = Animator.StringToHash("Hit"),
         Attack = Animator.StringToHash("Attack");
+    
     private readonly List<GameObject> bullets = new List<GameObject>();
     private Vector2 move, direction = new Vector2(0f, -1f);
     [SerializeField] private Transform bulletSpawnPosition;
 
+    
     private void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -34,6 +39,7 @@ public class RubyController : MonoBehaviour
         health = stats.MaxHealth;
         bulletsRemaining = stats.MaxBullets;
         GenerateBullets(20);
+        
         Events.OnThemeChange += HandleThemeChange;
         Events.OnFXVolumeChange += HandleVolumeChange;
     }
@@ -78,9 +84,10 @@ public class RubyController : MonoBehaviour
         if (bulletsRemaining <= 0) return;
         if (justFired) return;
         StartCoroutine(FireCooldown());
-        foreach (var bullet in bullets)
+        
+        //Going through bullets object pool and getting first inactive 
+        foreach (var bullet in bullets.Where(bullet => !bullet.activeInHierarchy))
         {
-            if (bullet.activeInHierarchy) continue;
             bullet.transform.position = bulletSpawnPosition.position;
             bullet.transform.rotation = Quaternion.identity;
             bullet.transform.Rotate(Vector3.forward, Vector2.SignedAngle(Vector2.right, direction));
@@ -99,12 +106,12 @@ public class RubyController : MonoBehaviour
         justFired = false;
     }
 
-
     private void Move()
     {
         anim.SetFloat(Speed, move.magnitude);
         body.velocity = move * stats.Speed;
-
+        
+        //remembering look direction after player stopped moving
         if (Mathf.Approximately((move.magnitude), 0f)) return;
         direction = move;
         anim.SetFloat(LookX, direction.x);
@@ -125,7 +132,7 @@ public class RubyController : MonoBehaviour
             if (isInvincible) return;
             StartCoroutine(Invincibility());
             anim.SetTrigger(Hit);
-            aud.PlayOneShot(sounds.Sets[(int) GameManager.Instance.theme].Hit);
+            aud.PlayOneShot(sounds.Sets[(int) GameManager.Instance.theme].Hit, aud.volume);
         }
         health = Mathf.Clamp(health + amount, 0, stats.MaxHealth);
         Debug.Log($"{health}/{stats.MaxHealth}");

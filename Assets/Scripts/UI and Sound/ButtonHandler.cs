@@ -8,11 +8,12 @@ public class ButtonHandler : MonoBehaviour
     private Theme theme = Theme.Happy;
     [SerializeField] private UISoundController soundController;
 
+    
     private void Start()
     {
         button = GetComponent<Button>();
         aud = GetComponent<AudioSource>();
-        aud.volume = AudioManager.Instance.FXVolume;    //TODO: hook all button on one audio source
+        aud.volume = AudioManager.Instance.FXVolume;    //TODO: hook all button sounds on one audio source
         theme = GameManager.Instance.theme;
         button.onClick.AddListener(PlayClickSound);
         Events.OnFXVolumeChange += ChangeVolume;

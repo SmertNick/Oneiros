@@ -1,11 +1,10 @@
 using UnityEngine;
-using UnityEngine.Serialization;
 
 [CreateAssetMenu(menuName = "RubyStats")]
 public class RubyStats : ScriptableObject
 {
     [SerializeField] private int maxHealth = 5, maxBullets = 20;
-    [SerializeField] private float invincibilityTime = 3f;
+    [SerializeField] private float invincibilityTime = 1f;
     [SerializeField] private float fireCooldownTime = 1f;
     [SerializeField] private Vector2 speed;
     public GameObject bullet;

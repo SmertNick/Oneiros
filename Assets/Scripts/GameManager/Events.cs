@@ -15,19 +15,19 @@ public static class Events
     {
         OnFXVolumeChange?.Invoke(value);
     }
-    
     #endregion
+    
     #region StateChange
-
     public delegate void GameStateDelegate(GameState newState, GameState previousState);
     public static event GameStateDelegate OnGameStateChange;
 
     public static void ChangeGameState(GameState newState, GameState previousState)
     {
         OnGameStateChange?.Invoke(newState, previousState);
+        Debug.Log("State switched from " + previousState + " to " + newState);
     }
-    
     #endregion
+    
     #region ThemeChange
     public delegate void ThemeDelegate(Theme newTheme);
     public static event ThemeDelegate OnThemeChange;
@@ -35,7 +35,7 @@ public static class Events
     public static void ChangeTheme(Theme newTheme)
     {
         OnThemeChange?.Invoke(newTheme);
-        Debug.Log("switched to " + newTheme);
+        Debug.Log("Theme switched to " + newTheme);
     }
     #endregion
 }

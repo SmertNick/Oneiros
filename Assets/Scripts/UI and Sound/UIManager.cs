@@ -30,12 +30,12 @@ public class UIManager : Singleton<UIManager>
     {
         if (state == GameState.Running)
             mainMenu.SetActive(false);
-        //pause menu pregame->game : turn on hud
+        //TODO instantiate pause menu instead of putting prefab in every scene 
     }
 
     private void HandleThemeChange(Theme newTheme)
     {
-        //switch hud canvases
+        //TODO switch hud canvases
     }
     
     protected override void OnDestroy()

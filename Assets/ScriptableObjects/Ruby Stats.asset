@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 5
   maxBullets: 100000
-  invincibilityTime: 3
+  invincibilityTime: 1
+  fireCooldownTime: 1
   speed: {x: 3, y: 3}
-  throwCogSound: {fileID: 8300000, guid: b2edfd40873655249ba0e01a5cf705be, type: 3}
   bullet: {fileID: 4657895984730347903, guid: 5364ad4d18c48cd46a53217dd515f227, type: 3}

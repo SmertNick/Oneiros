@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class AudioManager : Singleton<AudioManager>
@@ -35,7 +36,7 @@ public class AudioManager : Singleton<AudioManager>
 
     private void SetUpSound()
     {
-        foreach (var set in soundController.Sets)
+        foreach (var set in soundController.Sets) //creating background music source for each theme 
         {
             AudioSource aud = gameObject.AddComponent<AudioSource>();
             sources.Add(aud);
@@ -70,6 +71,8 @@ public class AudioManager : Singleton<AudioManager>
                     aud.Stop();
                 break;
             }
+            default:
+                throw new ArgumentOutOfRangeException(nameof(newState), newState, null);
         }
     }
 

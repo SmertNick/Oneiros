@@ -1,4 +1,3 @@
-using System;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,20 +6,20 @@ public class MainMenu : MonoBehaviour
 {
     private AudioSource aud;
     [SerializeField] private AudioClip backgroundClip;
+    
     [SerializeField] private Button startGameButton, optionsButton, creditsButton, quitButton;
     [SerializeField] private GameObject optionsMenu, creditsMenu;
+    
     [SerializeField] private Image happyBackground, brutalBackground;
     private Color colorFull, colorClear;
     [SerializeField] private TMP_Text s, phrenia;
 
+    
     private void Start()
     {
         aud = GetComponent<AudioSource>();
-        if (aud != null)
-        {
-            aud.volume = AudioManager.Instance.MusicVolume;
-            aud.clip = backgroundClip;
-        }
+        aud.volume = AudioManager.Instance.MusicVolume;
+        aud.clip = backgroundClip;
 
         colorClear = new Color(1f, 1f, 1f, 0f);
         colorFull = Color.white;
@@ -28,6 +27,7 @@ public class MainMenu : MonoBehaviour
 
         optionsMenu.SetActive(false);
         creditsMenu.SetActive(false);
+        
         Events.OnMusicVolumeChange += ChangeVolume;
         startGameButton.onClick.AddListener(StartGame);
         optionsButton.onClick.AddListener(Options);
@@ -37,18 +37,21 @@ public class MainMenu : MonoBehaviour
 
     private void Update()
     {
+        TitleBlink();
+    }
+
+    private void TitleBlink()
+    {
         float tmp = .6f * Mathf.PingPong(Time.timeSinceLevelLoad * .3f, 1f);
         brutalBackground.color = Color.Lerp(colorClear, colorFull, tmp);
         s.color = Color.Lerp(colorClear, colorFull, 1f - 2f * tmp);
         phrenia.color = Color.Lerp(colorClear, colorFull, tmp);
     }
 
+
     private void ChangeVolume(float value)
     {
-        if (aud != null)
-        {
-            aud.volume = value;
-        }
+        aud.volume = value;
     }
 
     private void OnDestroy()

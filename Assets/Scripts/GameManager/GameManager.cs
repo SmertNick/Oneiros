@@ -5,18 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : Singleton<GameManager>
 {
-
     [SerializeField] private GameObject[] systemPrefabs;
     private readonly List<GameObject> instancedSystemPrefabs = new List<GameObject>();
+
+    private GameState CurrentGameState { get; set; } = GameState.Pregame;
     private readonly List<AsyncOperation> loadOperations = new List<AsyncOperation>();
     private string currentLevelName = string.Empty;
-    public Theme theme = Theme.Happy;
-    public GameState CurrentGameState { get; private set; } = GameState.Pregame;
 
+    public Theme theme = Theme.Happy;
+
+    
     private void Start()
     {
         DontDestroyOnLoad(gameObject);
         InstantiateSystemPrefabs();
+        
         Events.OnThemeChange += ThemeChangeHandler;
         Events.ChangeTheme(theme);
     }
@@ -24,14 +27,9 @@ public class GameManager : Singleton<GameManager>
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
-        {
             ChangeTheme();
-        }
-
         if (Input.GetKeyDown(KeyCode.Escape))
-        {
             TogglePause();
-        }
     }
 
     #region ThemeControl
@@ -54,7 +52,6 @@ public class GameManager : Singleton<GameManager>
     {
         ChangeTheme((int)theme + 1);
     }
-    
     #endregion
 
     #region SceneControl
@@ -70,8 +67,8 @@ public class GameManager : Singleton<GameManager>
         loadOperations.Add(ao);
         currentLevelName = levelName;
         UpdateState(GameState.Running);
-        //add transition animation
-        //make a progress bar from ao.progress (float 0-1)
+        TogglePause();
+        //TODO add transition animation, make a progress bar from ao.progress (float 0-1)
     }
 
     private void OnLoadOperationComplete(AsyncOperation ao)
@@ -82,7 +79,8 @@ public class GameManager : Singleton<GameManager>
             ao.completed -= OnLoadOperationComplete;
         }
         Events.ChangeGameState(GameState.Running, GameState.Pregame);
-        //End transition animation
+        //TODO End transition animation
+        TogglePause();
         Debug.Log("Load Complete");
     }
 
@@ -105,7 +103,6 @@ public class GameManager : Singleton<GameManager>
     #endregion
 
     #region ManagersControl
-
     private void InstantiateSystemPrefabs()
     {
         foreach (GameObject obj in systemPrefabs)
@@ -123,7 +120,6 @@ public class GameManager : Singleton<GameManager>
     #endregion
 
     #region StateControl
-
     private void UpdateState(GameState state)
     {
         GameState previousGameState = CurrentGameState;
@@ -142,7 +138,6 @@ public class GameManager : Singleton<GameManager>
             default:
                 throw new ArgumentOutOfRangeException();
         }
-
         Events.ChangeGameState(CurrentGameState, previousGameState);
     }
 
@@ -169,14 +164,6 @@ public class GameManager : Singleton<GameManager>
     #endregion
 }
 
-public enum Theme
-{
-    Happy = 0,
-    Brutal = 1
-}
-public enum GameState
-{
-    Pregame = 0,
-    Running = 1,
-    Paused = 2
-}
+
+public enum Theme { Happy = 0, Brutal = 1 }
+public enum GameState { Pregame = 0, Running = 1, Paused = 2 }
