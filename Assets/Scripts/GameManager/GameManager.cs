@@ -80,7 +80,6 @@ public class GameManager : Singleton<GameManager>
         Events.ChangeTheme(theme);
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(currentLevelName));
         UpdateState(GameState.Running);
-        //TODO End transition animation
         if (Debug.isDebugBuild)
             Debug.Log("Load Complete");
     }
