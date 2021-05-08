@@ -127,6 +127,8 @@ public class RubyController : MonoBehaviour
 
     public void ChangeHealth(int amount)
     {
+        //TODO update HUD
+        //TODO player death
         if (amount < 0)
         {
             if (isInvincible) return;
