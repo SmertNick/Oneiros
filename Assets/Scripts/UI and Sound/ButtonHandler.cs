@@ -12,7 +12,7 @@ public class ButtonHandler : MonoBehaviour
     {
         button = GetComponent<Button>();
         aud = GetComponent<AudioSource>();
-        aud.volume = AudioManager.Instance.FXVolume;
+        aud.volume = AudioManager.Instance.FXVolume;    //TODO: hook all button on one audio source
         theme = GameManager.Instance.theme;
         button.onClick.AddListener(PlayClickSound);
         Events.OnFXVolumeChange += ChangeVolume;
