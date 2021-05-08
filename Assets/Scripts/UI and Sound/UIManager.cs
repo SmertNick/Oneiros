@@ -39,10 +39,6 @@ public class UIManager : Singleton<UIManager>
         {
             mainMenu.SetActive(false);
             pauseMenu.SetActive(true);
-            if (previousState == GameState.Pregame)
-            {
-                //transitionAnimation
-            }
         }
 
         if (state == GameState.Pregame)
