@@ -80,6 +80,7 @@ public class GameManager : Singleton<GameManager>
             ao.completed -= OnLoadOperationComplete;
         }
         Events.ChangeTheme(theme);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(currentLevelName));
         TogglePause();
         //TODO End transition animation
         if (Debug.isDebugBuild)

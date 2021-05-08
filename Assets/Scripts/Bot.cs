@@ -23,7 +23,7 @@ public class Bot : MonoBehaviour, IDamageable
         IsDead = Animator.StringToHash("Dead");
 
 
-    private void Start()
+    private void Awake()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         rigidbody2d.position = startPoint.position;
