@@ -70,7 +70,7 @@ public class RubyController : MonoBehaviour
     private void Update()
     {
         move = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && GameManager.Instance.CurrentGameState == GameState.Running)
             FireBullet();
     }
 
@@ -90,6 +90,7 @@ public class RubyController : MonoBehaviour
         {
             bullet.transform.position = bulletSpawnPosition.position;
             bullet.transform.rotation = Quaternion.identity;
+            //rotating bullet in the direction of movement
             bullet.transform.Rotate(Vector3.forward, Vector2.SignedAngle(Vector2.right, direction));
             bullet.SetActive(true);
             anim.SetTrigger(Attack);

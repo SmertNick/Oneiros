@@ -8,7 +8,7 @@ public class GameManager : Singleton<GameManager>
     [SerializeField] private GameObject[] systemPrefabs;
     private readonly List<GameObject> instancedSystemPrefabs = new List<GameObject>();
 
-    private GameState CurrentGameState { get; set; } = GameState.Pregame;
+    public GameState CurrentGameState { get; set; } = GameState.Pregame;
     private readonly List<AsyncOperation> loadOperations = new List<AsyncOperation>();
     public string currentLevelName = string.Empty;
 
