@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
+//TODO refactor into separate behaviours
 public class RubyController : MonoBehaviour
 {
     [SerializeField] private RubyStats stats;
